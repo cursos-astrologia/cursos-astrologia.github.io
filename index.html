@@ -18,36 +18,88 @@
 */
   window.onload=()=>M.AutoInit();
 
-      
-
-
   </script>
+ 
+  <style type="text/css">
+    .flex{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    .flex .icon-block {
+          max-width: 300px;
+    }
+    .divideraaa {
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+    }
+
+    .flex-align-center {
+      align-items: center;
+    }
+    .flex-space-between{
+      justify-content: space-between;
+    }
+
+
+    .parallax-container .container {
+      padding-top: 10%;
+    }
+    .parallax-container {
+      height: 80vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .row-striped{
+       background-color: rgba(242,242,242,0.5);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .primary-background{
+      background-color: #5e35b1 !important;
+    }    
+    .primary-text{
+      color: #5e35b1 !important;
+    }    
+    .primary-text.text-lighten-2{
+      color: #9575cd  !important;
+    }
+
+  </style>
+
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
+  <div class="navbar-fixed">
+    <nav class="white " role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#info-curso">Curso</a></li>
+          <li><a href="#info-curso">Sobre mi</a></li>
+        </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#info-curso">Curso</a></li>
+          <li><a href="#info-curso">Sobre mi</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
 
+  <div  class="parallax-container-container">
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Astrología para todes</h1>
+        <h1 class="header center primary-text text-lighten-2">Astrología para todo el mundo</h1>
         <div class="row center">
           <h5 class="header col s12 light">Bienvenido a encontrarte con voz mismo</h5>
         </div>
         <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light deep-purple darken-1">Get Started</a>
+          <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">Empecemos</a>
         </div>
         <br><br>
 
@@ -55,100 +107,95 @@
     </div>
     <div class="parallax"><img src="http://espaidinatur.com/wp-content/uploads/2018/08/astrolog%C3%ADa.jpg" alt="Unsplashed background img 1"></div>
   </div>
+  </div>
 
   <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
+    <div class="section" id="info-curso">
+      <div class="flex">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>Curso de astrologia</h4>
           <p class="left-align light">Te invito a realizar mi curso. Este curso es para astrólogos o estudiantes avanzados. Enseña como calcular dignidades esenciales de los planetas según la astrología tradicional. Un astrólogo se beneficiara por que obtendrá herramientas para interpretar la carta natal de modo más exhaustivo. Conocer la dignidad esencial de un planeta te dará valiosa información acerca de la capacidad del planeta para llevar a cabo la acción que se propone. Como astrólogo, tendrás la posibilidad de entender mejor con qué recursos cuenta tu cliente.</p>
-        </div>
       </div>
-
     </div>
   </div>
+
+  <div class="container">
+    <div class="flex flex-align-center flex-space-between"><h4>Contenido del curso</h4> Duracion total 02:22:28 </div>
+
+    <ul class="collapsible">
+      <li class="active">
+        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Video Introductorio al curso dignidades esenciales para astrologos </div>
+        <div class="collapsible-body">
+          <div class="row ">
+            <div class="col s12 m8">
+              En este video les cuento de que se trata el curso de dignidades esenciales, a quien esta dirigido y que habrán aprendido al finalizar el curso.
+            </div>              
+            <div class="col s12 m2">
+              <a href="#udemy"> Vista previa</a>
+            </div>    
+            <div class="col s12 m2">
+              1:05
+            </div>
+          </div>
+          <div class="divider"></div>            
+          <div class="row">
+            <div class="col s12 m8">
+              Introducción a dignidades esenciales, elementos y cualidades de los signos.
+            </div>              
+            <div class="col s12 m2">
+              <a href="#udemy"> Vista previa</a>
+            </div>    
+            <div class="col s12 m2">
+              2:05
+            </div>
+          </div>
+
+        </div>
+      </li>
+      <li >
+        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Second</div>
+        <div class="collapsible-body"><span>In progress ...</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Third</div>
+        <div class="collapsible-body"><span>In progress ...</span></div>
+      </li>
+    </ul>
+
+    <div class="row center">
+      <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">Ir al curso</a>
+    </div>
+  </div>
+
 
   <div class="container">
     <div class="section">
 
       <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
+      <div class="flex">
+        <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
             <h5 class="center">Speeds up development</h5>
 
             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
         </div>
-
-        <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
             <h5 class="center">User Experience Focused</h5>
 
             <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
+        <div class="icon-block">
+          <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+          <h5 class="center">Easy to work with</h5>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
+          <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
         </div>
       </div>
 
     </div>
   </div>
-
-
-
-    <div class="container">
-
-      <ul class="collapsible">
-        <li>
-          <div class="collapsible-header"><i class="material-icons">play_arrow</i>Video Introductorio al curso dignidades esenciales para astrologos </div>
-          <div class="collapsible-body">
-            <div class="row">
-              <div class="col s12 m8">
-                En este video les cuento de que se trata el curso de dignidades esenciales, a quien esta dirigido y que habrán aprendido al finalizar el curso.
-              </div>              
-              <div class="col s12 m2">
-                <a href="#udemy"> Vista previa</a>
-              </div>    
-              <div class="col s12 m2">
-                1:05
-              </div>
-            </div>            
-            <div class="row">
-              <div class="col s12 m8">
-                Introducción a dignidades esenciales, elementos y cualidades de los signos.
-              </div>              
-              <div class="col s12 m2">
-                <a href="#udemy"> Vista previa</a>
-              </div>    
-              <div class="col s12 m2">
-                2:05
-              </div>
-            </div>
-
-          </div>
-        </li>
-        <li class="active">
-          <div class="collapsible-header"><i class="material-icons">play_arrow</i>Second</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-          <div class="collapsible-header"><i class="material-icons">play_arrow</i>Third</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-      </ul>
-    </div>
 
 
   <div class="parallax-container valign-wrapper">
@@ -163,6 +210,37 @@
   </div>
 
 
+  <div class="container">
+    <div class="section">
+      <h3>¿Para quién es este curso?</h3>
+    <ul>
+      <li>Para cualquiera que este interesado en aprender los conceptos básicos de astrología</li>
+    </ul>
+    </div>
+  </div>  
+
+  <div class="container">
+    <div class="section">
+      <h3>¿Qué incluye el curso?</h3>
+    <ul>
+      <li>Certificado al finalizar</li>
+      <li>Poder verlo desde cualquier dispositivo</li>
+      <li>Poder verlo en cualquier momento, pausarlo y revovinarlo</li>
+    </ul>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="section">
+      <h3>¿Qué NO incluye el curso?</h3>
+    <ul>
+      <li>Predecir tu futuro</li>
+      <li>...</li>
+      <li>...</li>
+    </ul>
+    </div>
+  </div>
+
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -175,7 +253,7 @@
     <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer primary-background">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
