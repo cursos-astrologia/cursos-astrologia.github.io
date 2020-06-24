@@ -43,12 +43,8 @@
     }
 
     .flex .icon-block {
-          max-width: 300px;
+      max-width: 300px;
     }
-    .divideraaa {
-      border-bottom: 1px solid rgba(0,0,0,0.12);
-    }
-
     .flex-align-center {
       align-items: center;
     }
@@ -73,6 +69,9 @@
     html {
       scroll-behavior: smooth;
     }
+    .text-shadow{
+      text-shadow: 1px 1px 19px black;
+    }
     .primary-background{
       background-color: #5e35b1 !important;
     }    
@@ -86,6 +85,9 @@
       color: #d1c4e9   !important;
     }
 
+    .sidenav-overlay{
+          z-index: 996;
+    }
   .pushpin.curso-card.pin-top{
     display: none;
   }
@@ -115,6 +117,13 @@
     margin-left: 5px;
     max-width: 95%;
   }
+
+.requirements__list li{
+    list-style: disc!important;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
   </style>
 
 </head>
@@ -122,17 +131,17 @@
   <div class="navbar-fixed">
     <nav class="white " role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
+        <a id="logo-container" href="#" class="brand-logo">Astrología</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#info-curso">Curso</a></li>
-          <li><a href="#info-curso">Sobre mi</a></li>
+          <li><a href="#contenido-curso">contenido</a></li>
+          <li><a href="#curso-requisitos">requisitos</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="#info-curso">Curso</a></li>
-          <li><a href="#info-curso">Sobre mi</a></li>
+          <li><a href="#contenido-curso">contenido</a></li>
+          <li><a href="#curso-requisitos">requisitos</a></li>
         </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger primary-text"><i class="material-icons">menu</i></a>
       </div>
     </nav>
   </div>
@@ -142,9 +151,9 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center primary-text text-lighten-4">Astrología para todo el mundo</h1>
+        <h1 class="header center white-text text-lighten-4 text-shadow">Astrología para todo el mundo</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Bienvenido a encontrarte con vos mismo</h5>
+          <h5 class="header col s12 light text-shadow">Bienvenido a encontrarte con vos mismo</h5>
         </div>
         <div class="row center">
           <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">Empecemos</a>
@@ -153,7 +162,7 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
   </div>
 
@@ -169,8 +178,8 @@
           En este curso nos enfocaremos y explicaremos los <strong>componentes de una carta natal</strong>, así bien cómo interpretarlos.  Veremos la <strong>energía de cada planeta</strong>, cada elemento, <strong>los signos zodiacales</strong> y sus cualidades, las casas astrológicas, el ascendente, el medio cielo, los principales aspectos y una aproximación a cómo se debe abordar la lectura de carta.
         </p>
 
-        <div class="row center">
-          <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">
+        <div class="row center"  id="contenido-curso">
+          <a href="#curso-progreso" id="download-button" class="btn-large waves-effect waves-light primary-background">
           Ir al curso
         <i class="material-icons right">forward</i></a>
         </div>
@@ -203,7 +212,7 @@
       <div class="price-text--lightest grey-text text-darken-1" data-purpose="discount-percentage"><span>90 % de descuento</span></div>
     </div>
     <div >
-      <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background ">Ir al curso</a>
+      <a href="#curso-progreso" id="download-button" class="btn-large waves-effect waves-light primary-background ">Ir al curso</a>
     <br/>
 <span class="black-text">Este curso incluye:</span>    </div>
     <div class="divider"></div>
@@ -226,53 +235,16 @@
     <div class="flex flex-align-center flex-space-between"><h4>Contenido del curso</h4> Duracion total 02:22:28 </div>
 
     <ul id="contenido-collapsable" class="collapsible expandable">
-      <li class="active">
-        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Video Introductorio al curso dignidades esenciales para astrologos </div>
-        <div class="collapsible-body">
-          <div class="flex flex-space-between">
-            <i class="material-icons ">play_circle_filled</i>
-            <div class="video-description">
-              En este video les cuento de que se trata el curso de dignidades esenciales, a quien esta dirigido y que habrán aprendido al finalizar el curso.
-            </div>              
-            <div >
-              <a href="#udemy"> Vista previa</a>
-            </div>    
-            <div >
-              1:05
-            </div>
-          </div>
-          <div class="divider"></div>            
-          <div class="row">
-            <div class="col s12 m8">
-              Introducción a dignidades esenciales, elementos y cualidades de los signos.
-            </div>              
-            <div class="col s12 m2">
-              <a href="#udemy"> Vista previa</a>
-            </div>    
-            <div class="col s12 m2">
-              2:05
-            </div>
-          </div>
-
-        </div>
-      </li>
-      <li >
-        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Second</div>
-        <div class="collapsible-body"><span>In progress ...</span></div>
-      </li>
-      <li>
-        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Third</div>
-        <div class="collapsible-body"><span>In progress ...</span></div>
-      </li>
+      <!--   Inserted by script   -->
     </ul>
 
   </div>
 
-
+<!-- 
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      <-!--   Icon Section   - ->
       <div class="flex">
         <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
@@ -295,68 +267,55 @@
         </div>
       </div>
 
-
-        <img style="width: 300px;" src="images/signs.png" alt="signs" title="signs"/> 
-
-
     </div>
   </div>
+  -->
 
-
-  <div class="parallax-container valign-wrapper">
+  <div class="parallax-container valign-wrapper" id="curso-requisitos">
     <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h3 class="header col s12 light">Información del curso</h3>
-        </div>
-      </div>
+      <h3 class="header center white-text text-lighten-4 text-shadow light">Información del curso</h3>
+
     </div>
     <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
 
   <div class="container">
-    <div class="section">
+    <div class="section flow-text requirements__list">
       <h3>Requisitos</h3>
       <ul>
         <li>No se necesita experiencia previa</li>
-        <li>Tener ganas de aprender</li>
+        <li>Debes tener ganas de aprender</li>
       </ul>
 
       <h3>¿Para quién es este curso?</h3>
     <ul>
       <li>Para cualquiera que este interesado en aprender los conceptos básicos de astrología</li>
     </ul>
-    </div>
-  </div>  
 
-  <div class="container">
-    <div class="section">
       <h3>¿Qué incluye el curso?</h3>
     <ul>
-      <li>Certificado al finalizar</li>
       <li>Poder verlo desde cualquier dispositivo</li>
+      <li>Acceso de por vida</li>
       <li>Poder verlo en cualquier momento, pausarlo y rebobinarlo</li>
+      <li>Certificado de finalizacion</li>
     </ul>
-    </div>
-  </div>
-  
-  <div class="container">
-    <div class="section">
+
       <h3>¿Qué NO incluye el curso?</h3>
     <ul>
       <li>Predecir tu futuro</li>
-      <li>...</li>
-      <li>...</li>
+      <li>Conceptos muy avanzados de astrología</li>
     </ul>
-    </div>
+  </div>
 
     <div class="ud-component--clp--gift-this-course" data-component-props="{}" ng-non-bindable=""><div><a class="gift-this-course--gift-this-course__link--3TaW-" data-purpose="gift-course" href="/gift/german-beginners-course-express/?couponCode=UDEAFFPC620"><span class="gift-this-course--gift-this-course__icon--RuGjp udi-medium udi udi-gift"></span><span></span></a></div></div>
     
-    <ul class="collection">
-      <li class="collection-item flex-start"><i class="material-icons">laptop</i>Realizar este curso</li>
-      <li class="collection-item flex-start"><i class="material-icons">favorite</i>Regalar este curso</li>
-      <li class="collection-item flex-start"><i class="material-icons">group_add</i>Compartir</li>
+
+    <ul class="collection ">
+      <h3 class="collection-header">¿Qué puedo hacer?</h3>
+      <li class="collection-item flex-start flex-align-center"><i class="material-icons">laptop</i>Realizar este curso</li>
+      <li class="collection-item flex-start flex-align-center"><i class="material-icons">favorite</i>Regalar este curso</li>
+      <li class="collection-item flex-start flex-align-center"><i class="material-icons">group_add</i>Compartir</li>
     </ul>
 
   </div>
@@ -366,15 +325,19 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Sección en progreso...</h5>
         </div>
       </div>
     </div>
     <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <div class="container">
+  <div class="container" id="curso-progreso">
     <div class="section">
+
+      <h3 class="header ">El curso está en proceso y saldrá prontos...</h3>
+      <p>Ponete en contacto conmigo para obtener un avance del curso <strong>con descuento</strong></p>
+
       <div class="carousel">
         <a class="carousel-item" href="#one!"><img src="images/virgo.png"></a>
         <a class="carousel-item" href="#two!"><img src="images/signs.png"></a>
@@ -388,34 +351,30 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">Sobre mi</h5>
+          <p class="grey-text text-lighten-4">Este es mi primer curso y el fruto de mucho esfuerzo. Espero que lo disfrutes y lo puedas compartir.</p>
 
 
         </div>
-        <div class="col l3 s12">
+       <!--  <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
           <ul>
             <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
             <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
+        -->
       </div>
+
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Desarrollado por Leonardo R. con <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
   </footer>
