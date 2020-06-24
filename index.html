@@ -9,15 +9,27 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script type="text/javascript">
+
 
     /*document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.collapsible');
     var instances = M.Collapsible.init(elems, {});
   })
 */
-  window.onload=()=>M.AutoInit();
+  window.onload=()=>{
+    M.AutoInit();
+    var elem = document.querySelector('.collapsible.expandable');
+    var instance = M.Collapsible.init(elem, {
+      accordion: false
+    });
 
+
+    $('.pushpin.curso-card').pushpin({offset:300,top:1200/*,bottom:2500*/});
+
+  }
+     
   </script>
  
   <style type="text/css">
@@ -26,6 +38,10 @@
       flex-flow: row wrap;
       justify-content: center;
     }
+    .collection-item.flex{
+      justify-content: flex-start;
+    }
+
     .flex .icon-block {
           max-width: 300px;
     }
@@ -65,8 +81,20 @@
     }    
     .primary-text.text-lighten-2{
       color: #9575cd  !important;
+    }    
+    .primary-text.text-lighten-4{
+      color: #d1c4e9   !important;
     }
 
+  .pushpin.curso-card.pin-top{
+    display: none;
+  }
+  .pushpin.curso-card{
+    right: 5px;
+    top: 50%;
+    width: 20%;
+    z-index: 3;
+  }
   </style>
 
 </head>
@@ -94,9 +122,9 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center primary-text text-lighten-2">Astrología para todo el mundo</h1>
+        <h1 class="header center primary-text text-lighten-4">Astrología para todo el mundo</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Bienvenido a encontrarte con voz mismo</h5>
+          <h5 class="header col s12 light">Bienvenido a encontrarte con vos mismo</h5>
         </div>
         <div class="row center">
           <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">Empecemos</a>
@@ -105,24 +133,58 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="http://espaidinatur.com/wp-content/uploads/2018/08/astrolog%C3%ADa.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
   </div>
 
-  <div class="container">
-    <div class="section" id="info-curso">
+  <div class="container" id="info-curso">
+    <div class="section" >
       <div class="flex">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Curso de astrologia</h4>
-          <p class="left-align light">Te invito a realizar mi curso. Este curso es para astrólogos o estudiantes avanzados. Enseña como calcular dignidades esenciales de los planetas según la astrología tradicional. Un astrólogo se beneficiara por que obtendrá herramientas para interpretar la carta natal de modo más exhaustivo. Conocer la dignidad esencial de un planeta te dará valiosa información acerca de la capacidad del planeta para llevar a cabo la acción que se propone. Como astrólogo, tendrás la posibilidad de entender mejor con qué recursos cuenta tu cliente.</p>
+        <h3><i class="mdi-content-send brown-text"></i></h3>
+        <h4>Curso de astrologia</h4>
+        <p class="left-align light flow-text">
+
+        Hola! Bienvenidos a mi curso. Los voy a acompañar en este recorrido astrológico, dónde vamos a tener  un <strong>primer acercamiento</strong> a la astrología y a los elementos que la componen. Vamos a ver que son, que significan y cómo se los interpreta,De una forma <strong>muy fácil, muy clara, y resumida </strong>.La astrología aparece a lo largo de la historia en diferentes culturas y en diferentes formas. Interrelaciona elementos de la mitología, la numerología, la astronomía y la filosofía.
+        </p>
+        <p class="left-align light flow-text">
+          En este curso nos enfocaremos y explicaremos los <strong>componentes de una carta natal</strong>, así bien cómo interpretarlos.  Veremos la energía de cada planeta, cada elemento, los signos zodiacales y sus cualidades, las casas astrológicas, el ascendente, el medio cielo, los principales aspectos y una aproximación a cómo se debe abordar la lectura de carta.
+        </p>
+
+        <div class="row center">
+          <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">
+          Ir al curso</a>
+        </div>
+
       </div>
     </div>
   </div>
 
+  <div class=" card-panel grey lighten-5 z-depth-1 container curso-card pushpin flex  scale-transition scale-in hide-on-small-only">
+   
+      <h5 class="center">Curso de astrología desde cero</h5>
+      <img src="images/curso.jpg" style="width:150px;" alt="foto del curso" class=" responsive-img">
+      <div class="divider"></div>
+        <p>El curso está disponible en <img style="width: 25px;" src="images/udemy.svg" alt="zoom" title="zoom"/> Udemy</p>
+        <span class="black-text">Este curso incluye:</span>
+      <div class="divider"></div>
+      <ul class="collection-no">
+        <li class="collection-item flex"><i class="material-icons">access_time</i>2,5 horas de vídeo bajo demanda</li>
+        <li class="collection-item flex"><i class="material-icons">folder</i>1 artículo descargable</li>
+        <li class="collection-item flex"><i class="material-icons">local_cafe</i>Acceso de por vida completo</li>
+        <li class="collection-item flex"><i class="material-icons">laptop</i>Acceso en dispositivos móviles y TV</li>
+        <li class="collection-item flex"><i class="material-icons">done</i>Certificado de finalización</li>
+      </ul>
+
+      <p><strong> Obtene tu cupon de descuento ! </strong></p>
+      <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background ">Ir al curso</a>
+  
+  </div>
+
+
   <div class="container">
     <div class="flex flex-align-center flex-space-between"><h4>Contenido del curso</h4> Duracion total 02:22:28 </div>
 
-    <ul class="collapsible">
+    <ul class="collapsible expandable">
       <li class="active">
         <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Video Introductorio al curso dignidades esenciales para astrologos </div>
         <div class="collapsible-body">
@@ -162,9 +224,6 @@
       </li>
     </ul>
 
-    <div class="row center">
-      <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">Ir al curso</a>
-    </div>
   </div>
 
 
@@ -180,10 +239,10 @@
             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
         </div>
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+            <h2 class="center brown-text"><i class="material-icons">devices</i></h2>
+            <h5 class="center">Disponible en cualquier dispositivo</h5>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p class="light">Acceso en dispositivos móviles, computadoras de escritorios y TV.</p>
         </div>
 
         <div class="icon-block">
@@ -194,6 +253,10 @@
         </div>
       </div>
 
+
+        <img style="width: 300px;" src="images/signs.png" alt="signs" title="signs"/> 
+
+
     </div>
   </div>
 
@@ -202,7 +265,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h3 class="header col s12 light">Información del curso</h3>
         </div>
       </div>
     </div>
@@ -239,6 +302,15 @@
       <li>...</li>
     </ul>
     </div>
+
+    <div class="ud-component--clp--gift-this-course" data-component-props="{}" ng-non-bindable=""><div><a class="gift-this-course--gift-this-course__link--3TaW-" data-purpose="gift-course" href="/gift/german-beginners-course-express/?couponCode=UDEAFFPC620"><span class="gift-this-course--gift-this-course__icon--RuGjp udi-medium udi udi-gift"></span><span></span></a></div></div>
+    
+    <ul class="collection">
+      <li class="collection-item"><i class="material-icons">laptop</i>Realizar este curso</li>
+      <li class="collection-item"><i class="material-icons">favorite</i>Regalar este curso</li>
+      <li class="collection-item"><i class="material-icons">group_add</i>Compartir</li>
+    </ul>
+
   </div>
 
 
