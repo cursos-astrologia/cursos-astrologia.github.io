@@ -26,7 +26,7 @@
     });
 
 
-    $('.pushpin.curso-card').pushpin({offset:300,top:1200/*,bottom:2500*/});
+    $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
 
   }
      
@@ -38,7 +38,7 @@
       flex-flow: row wrap;
       justify-content: center;
     }
-    .collection-item.flex{
+    .collection-item.flex-start{
       justify-content: flex-start;
     }
 
@@ -95,6 +95,26 @@
     width: 20%;
     z-index: 3;
   }
+  .price-text-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .course-price-text{
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+
+
+  .video-description{
+    flex-grow: 1;
+    margin-left: 5px;
+    max-width: 95%;
+  }
   </style>
 
 </head>
@@ -140,19 +160,19 @@
   <div class="container" id="info-curso">
     <div class="section" >
       <div class="flex">
-        <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h4>Curso de astrologia</h4>
+        <h3><i class="mdi-content-send brown-text"></i>Curso de astrologia</h3>
         <p class="left-align light flow-text">
 
         Hola! Bienvenidos a mi curso. Los voy a acompañar en este recorrido astrológico, dónde vamos a tener  un <strong>primer acercamiento</strong> a la astrología y a los elementos que la componen. Vamos a ver que son, que significan y cómo se los interpreta,De una forma <strong>muy fácil, muy clara, y resumida </strong>.La astrología aparece a lo largo de la historia en diferentes culturas y en diferentes formas. Interrelaciona elementos de la mitología, la numerología, la astronomía y la filosofía.
         </p>
         <p class="left-align light flow-text">
-          En este curso nos enfocaremos y explicaremos los <strong>componentes de una carta natal</strong>, así bien cómo interpretarlos.  Veremos la energía de cada planeta, cada elemento, los signos zodiacales y sus cualidades, las casas astrológicas, el ascendente, el medio cielo, los principales aspectos y una aproximación a cómo se debe abordar la lectura de carta.
+          En este curso nos enfocaremos y explicaremos los <strong>componentes de una carta natal</strong>, así bien cómo interpretarlos.  Veremos la <strong>energía de cada planeta</strong>, cada elemento, <strong>los signos zodiacales</strong> y sus cualidades, las casas astrológicas, el ascendente, el medio cielo, los principales aspectos y una aproximación a cómo se debe abordar la lectura de carta.
         </p>
 
         <div class="row center">
           <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">
-          Ir al curso</a>
+          Ir al curso
+        <i class="material-icons right">forward</i></a>
         </div>
 
       </div>
@@ -161,22 +181,37 @@
 
   <div class=" card-panel grey lighten-5 z-depth-1 container curso-card pushpin flex  scale-transition scale-in hide-on-small-only">
    
-      <h5 class="center">Curso de astrología desde cero</h5>
-      <img src="images/curso.jpg" style="width:150px;" alt="foto del curso" class=" responsive-img">
-      <div class="divider"></div>
-        <p>El curso está disponible en <img style="width: 25px;" src="images/udemy.svg" alt="zoom" title="zoom"/> Udemy</p>
-        <span class="black-text">Este curso incluye:</span>
-      <div class="divider"></div>
-      <ul class="collection-no">
-        <li class="collection-item flex"><i class="material-icons">access_time</i>2,5 horas de vídeo bajo demanda</li>
-        <li class="collection-item flex"><i class="material-icons">folder</i>1 artículo descargable</li>
-        <li class="collection-item flex"><i class="material-icons">local_cafe</i>Acceso de por vida completo</li>
-        <li class="collection-item flex"><i class="material-icons">laptop</i>Acceso en dispositivos móviles y TV</li>
-        <li class="collection-item flex"><i class="material-icons">done</i>Certificado de finalización</li>
-      </ul>
-
-      <p><strong> Obtene tu cupon de descuento ! </strong></p>
+    <h5 class="center">Curso de astrología desde cero</h5>
+    <img src="images/curso.jpg" style="width:150px;" alt="foto del curso" class=" responsive-img hide-on-med-and-down">
+    <div class="divider"></div>
+    El curso está disponible en Udemy<img style="width: 25px;" src="images/udemy.svg" alt="zoom" title="zoom"/>
+    <div class="price-text-container" data-purpose="price-text-container">
+      <div class="course-price-text grey-text text-darken-3 truncate" data-purpose="course-price-text">
+        <span>
+          <span>9,99&nbsp;US$</span>
+        </span>
+      </div>
+      <div class="original-price-container" data-purpose="original-price-container">
+        <div data-purpose="course-old-price-text">
+          <span><s><span>90,99&nbsp;US$</span></s></span>
+        </div>
+      </div>
+      <div class="price-text--lightest grey-text text-darken-1" data-purpose="discount-percentage"><span>90 % de descuento</span></div>
+    </div>
+    <div >
       <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background ">Ir al curso</a>
+    <br/>
+<span class="black-text">Este curso incluye:</span>    </div>
+    <div class="divider"></div>
+    <ul class="collection-no">
+      <li class="collection-item flex-start"><i class="material-icons">access_time</i>2,5 horas de vídeo bajo demanda</li>
+      <li class="collection-item flex-start"><i class="material-icons">folder</i>1 artículo descargable</li>
+      <li class="collection-item flex-start"><i class="material-icons">local_cafe</i>Acceso de por vida</li>
+      <li class="collection-item flex-start"><i class="material-icons">laptop</i>Acceso en dispositivos móviles y TV</li>
+      <li class="collection-item flex-start"><i class="material-icons">done</i>Certificado de finalización</li>
+    </ul>
+
+      <!-- <p><strong>¡Obtene tu cupon de descuento! </strong></p> -->
   
   </div>
 
@@ -184,18 +219,19 @@
   <div class="container">
     <div class="flex flex-align-center flex-space-between"><h4>Contenido del curso</h4> Duracion total 02:22:28 </div>
 
-    <ul class="collapsible expandable">
+    <ul id="contenido-collapsable" class="collapsible expandable">
       <li class="active">
         <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Video Introductorio al curso dignidades esenciales para astrologos </div>
         <div class="collapsible-body">
-          <div class="row ">
-            <div class="col s12 m8">
+          <div class="flex flex-space-between">
+            <i class="material-icons ">play_circle_filled</i>
+            <div class="video-description">
               En este video les cuento de que se trata el curso de dignidades esenciales, a quien esta dirigido y que habrán aprendido al finalizar el curso.
             </div>              
-            <div class="col s12 m2">
+            <div >
               <a href="#udemy"> Vista previa</a>
             </div>    
-            <div class="col s12 m2">
+            <div >
               1:05
             </div>
           </div>
@@ -275,6 +311,12 @@
 
   <div class="container">
     <div class="section">
+      <h3>Requisitos</h3>
+      <ul>
+        <li>No se necesita experiencia previa</li>
+        <li>Tener ganas de aprender</li>
+      </ul>
+
       <h3>¿Para quién es este curso?</h3>
     <ul>
       <li>Para cualquiera que este interesado en aprender los conceptos básicos de astrología</li>
@@ -288,7 +330,7 @@
     <ul>
       <li>Certificado al finalizar</li>
       <li>Poder verlo desde cualquier dispositivo</li>
-      <li>Poder verlo en cualquier momento, pausarlo y revovinarlo</li>
+      <li>Poder verlo en cualquier momento, pausarlo y rebobinarlo</li>
     </ul>
     </div>
   </div>
@@ -306,9 +348,9 @@
     <div class="ud-component--clp--gift-this-course" data-component-props="{}" ng-non-bindable=""><div><a class="gift-this-course--gift-this-course__link--3TaW-" data-purpose="gift-course" href="/gift/german-beginners-course-express/?couponCode=UDEAFFPC620"><span class="gift-this-course--gift-this-course__icon--RuGjp udi-medium udi udi-gift"></span><span></span></a></div></div>
     
     <ul class="collection">
-      <li class="collection-item"><i class="material-icons">laptop</i>Realizar este curso</li>
-      <li class="collection-item"><i class="material-icons">favorite</i>Regalar este curso</li>
-      <li class="collection-item"><i class="material-icons">group_add</i>Compartir</li>
+      <li class="collection-item flex-start"><i class="material-icons">laptop</i>Realizar este curso</li>
+      <li class="collection-item flex-start"><i class="material-icons">favorite</i>Regalar este curso</li>
+      <li class="collection-item flex-start"><i class="material-icons">group_add</i>Compartir</li>
     </ul>
 
   </div>
@@ -323,6 +365,17 @@
       </div>
     </div>
     <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <div class="carousel">
+        <a class="carousel-item" href="#one!"><img src="images/virgo.png"></a>
+        <a class="carousel-item" href="#two!"><img src="images/signs.png"></a>
+        <a class="carousel-item" href="#three!"><img src="images/virgo.png"></a>
+      </div>
+
+    </div>
   </div>
 
   <footer class="page-footer primary-background">
