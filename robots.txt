@@ -1,0 +1,4 @@
+Sitemap: https://leonardo-rocca.github.io/cursos-astrologia/sitemap.txt
+User-agent: *
+Disallow: /css/
+Disallow: /js/
