@@ -1,4 +1,4 @@
-var PRECACHE = 'precache-v4';
+var PRECACHE = 'precache-v1';
 var RUNTIME = 'runtime';
 
 // list the files you want cached by the service worker
@@ -6,19 +6,19 @@ PRECACHE_URLS = [
     'index.html',
     './',
     'index.html?utm_source=homescreen',
-    'css/main.min.css',
-    'css/hamburgers.spin.min.css',
-    'js/index-post-jq.js',
-    'js/js-index-loader.js',
-    'js/main.min.js',
-  //  'fotos/no_image.jpg',
-    'fotos/nacho.JPG',
-    'fotos/nacho1.jpg',
-    'fotos/nacho2.jpg',
-    'fotos/nacho3.jpg',
-    'fotos/nacho4.jpg',
-    'fotos/fondo_principal.webp',
-    'fotos/fondo_principal.png'
+    'css/style.css',
+    'css/materialize.css',
+    'css/materialize.min.css',
+    'js/init.js',
+    'js/materialize.js',
+    'js/materialize.min.js',
+    'images/background1.jpg',
+    'images/background2.jpg',
+    'images/background3.jpg',
+    'images/CURSO1.png',
+    'images/CURSO2.png',
+    'images/CURSO3.png',
+    'images/CURSO4.png',
 
 ];
 

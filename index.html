@@ -22,6 +22,7 @@
 
   <meta name="msapplication-TileImage" content="images/logo192.png">
   <meta name="msapplication-TileColor" content="#5e35b1">
+  <link rel="manifest" href="manifest.json">
 
 
   <!-- CSS  -->
@@ -51,7 +52,20 @@
     indicators: true
   });
   }
-     
+   
+
+  if ( 'serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('sw.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+
   </script>
  
   <style type="text/css">
@@ -205,7 +219,7 @@ hr {
 
       </div>
     </div>
-    <div class="parallax primary-background"><img src="images/background1.jpg" alt="Unsplashed background img 1" ></div>
+    <div class="parallax primary-background"><img alt="foto del cielo. en un bosque mirando las estrellas" src="images/background1.jpg" ></div>
   </div>
   </div>
 
@@ -319,7 +333,7 @@ hr {
       <h3 class="header center white-text text-lighten-4 text-shadow light">Información del curso</h3>
 
     </div>
-    <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img alt="foto de la galaxia" src="images/background2.jpg"></div>
   </div>
 
 
@@ -377,7 +391,7 @@ hr {
         </div>
       </div>
     </div>
-    <div class="parallax" style="filter: blur(4px);"><img src="images/background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax" style="filter: blur(4px);"><img alt="foto del cielo y montañas" src="images/background3.jpg"></div>
   </div>
 
   <div class="container">
@@ -395,10 +409,10 @@ hr {
 
       <h4>Previsualización</h4>
       <div class="carousel carousel-slider" >
-        <a class="carousel-item" href="#one!">  <img src="images/CURSO1.png"></a>
-        <a class="carousel-item" href="#two!">  <img src="images/CURSO2.png"></a>
-        <a class="carousel-item" href="#three!"><img src="images/CURSO3.png"></a>
-        <a class="carousel-item" href="#four!"><img src="images/CURSO4.png"></a>
+        <a class="carousel-item" href="#one!">  <img alt="diapositiva del curso" src="images/CURSO1.png"></a>
+        <a class="carousel-item" href="#two!">  <img alt="diapositiva del curso" src="images/CURSO2.png"></a>
+        <a class="carousel-item" href="#three!"><img alt="diapositiva del curso" src="images/CURSO3.png"></a>
+        <a class="carousel-item" href="#four!"> <img alt="diapositiva del curso" src="images/CURSO4.png"></a>
       </div>
         <br />
         <br />
