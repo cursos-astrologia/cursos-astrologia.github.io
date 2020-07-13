@@ -4,6 +4,7 @@
     $('.sidenav').sidenav();
     $('.parallax').parallax();
   
+  //CARGAR CONTENIDO DE CLASES
     [
     	{title:"Introducción ¿qué es la astrología?",duration:"1:05",items:[
     	{description:"Historia- de donde viene",enabled:true,duration:"10:05"},
@@ -11,9 +12,22 @@
     	]},
     	{title:"Planetas",duration:"1:05",items:[
     	{description:"Planetas introducción",duration:"3:05"},
-    	{description:"Signos, elementos y modos",duration:"3:45"},
+    	{description:"Planetass personales",duration:"3:45"},
+      {description:"Planetass sociales",duration:"3:45"},
     	{description:"Casas y casas angulares",duration:"1:05"},
-    	]},
+    	]},      
+
+      {title:"Signos y elementos...",duration:"30:05",items:[
+      {description:"Pendiente...",duration:"9:05"},
+      {description:"Pendiente...",duration:"9:45"},
+      {description:"Pendiente...",duration:"9:05"},
+      ]},
+      {title:"Pendiente...",duration:"30:05",items:[
+      {description:"Pendiente...",duration:"9:05"},
+      {description:"Pendiente...",duration:"9:45"},
+      {description:"Pendiente...",duration:"9:05"},
+      ]},
+
     	{title:"Ascendente",duration:"6:05",items:[
     	{description:"Ascendente introducción",duration:"10:05"},
     	]},
@@ -41,6 +55,40 @@
 			$('#video-section-'+index).append(` <div class="divider"> </div`);
 		}
 	 )
+
+
+
+
+
+
+
+	// CONTADOR DE CUANTO FALTA
+
+	// Set the date we're counting down to
+	var countDownDate = new Date("Jul 20, 2020 15:37:25").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+	  var now = new Date().getTime();
+	  // Find the distance between now an the count down date
+	  var distance = countDownDate - now;
+
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	  // Display the result in an element with id="demo"
+	  document.getElementById("comming-soon-time").innerHTML = days + "d " + hours + "h "
+	  + minutes + "m " + seconds + "s ";
+
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+	    clearInterval(x);
+	    document.getElementById("comming-soon-time").innerHTML = "EXPIRED";
+	  }
+	}, 1000);
 
     })
    

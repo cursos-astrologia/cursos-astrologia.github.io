@@ -3,7 +3,15 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>lugi astrologia</title>
+  <title>Curso astrologia</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Curso de astrologia para Udemy. Cupon de Descuento. Aprende los conceptos basicos sobre la astrologia. Estudia los planetas, signos , elementos, y como analizar una carta natal">
+  <meta name="keywords" content="Curso astrologia , Curso astrologia gratis , Udemy ,signo zodiaco , ascendente,horóscopo,analizar carta natal, carta solar, astros , planetas, elementos , udemy , aprender astrología , curso online , descuento en curso , conceptos basicos">
+  <meta name="author" content="Leonardo Rocca">
+
+  <link rel="icon" href="favico.png" type="image/png" sizes="16x16">
+  <meta name="theme-color" content="#5e35b1">
+
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,7 +35,10 @@
 
 
     $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
-
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
   }
      
   </script>
@@ -124,6 +135,27 @@
     padding-left: 10px;
 }
 
+
+.coupon {
+  display: none; /* TODO : ESTO ES TEMPORAL */
+  border: 5px dotted #bbb;
+  width: 80%;
+  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.cutout-text{
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+
   </style>
 
 </head>
@@ -153,7 +185,7 @@
         <br><br>
         <h1 class="header center white-text text-lighten-4 text-shadow">Astrología para todo el mundo</h1>
         <div class="row center">
-          <h5 class="header col s12 light text-shadow">Bienvenido a encontrarte con vos mismo</h5>
+          <h5 class="header col s12 light text-shadow"><strong>Bienvenido a encontrarte con vos mismo/a</strong></h5>
         </div>
         <div class="row center">
           <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background">Empecemos</a>
@@ -188,7 +220,7 @@
     </div>
   </div>
 
-  <div class="  grey lighten-5 z-depth-1 curso-card pushpin flex  scale-transition scale-in hide-on-small-only" >
+  <div class=" coupon grey lighten-5 z-depth-1 curso-card pushpin flex  scale-transition scale-in hide-on-small-only" >
      <ul class="collapsible " style="margin: 0">
       <li class="active">
          <div class="collapsible-header row-striped"> <h5 class="center">Curso de astrología desde cero</h5> </div>
@@ -232,7 +264,7 @@
 
 
   <div class="container">
-    <div class="flex flex-align-center flex-space-between"><h4>Contenido del curso</h4> Duracion total 02:22:28 </div>
+    <div class="flex flex-align-center flex-space-between"><h4>Contenido del curso</h4> Duracion total 01:00:28 </div>
 
     <ul id="contenido-collapsable" class="collapsible expandable">
       <!--   Inserted by script   -->
@@ -276,7 +308,7 @@
       <h3 class="header center white-text text-lighten-4 text-shadow light">Información del curso</h3>
 
     </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
 
@@ -301,11 +333,13 @@
       <li>Certificado de finalizacion</li>
     </ul>
 
-      <h3>¿Qué NO incluye el curso?</h3>
+   <!--    <h3>¿Qué NO incluye el curso?</h3>
     <ul>
       <li>Predecir tu futuro</li>
       <li>Conceptos muy avanzados de astrología</li>
     </ul>
+
+  -->
   </div>
 
     <div class="ud-component--clp--gift-this-course" data-component-props="{}" ng-non-bindable=""><div><a class="gift-this-course--gift-this-course__link--3TaW-" data-purpose="gift-course" href="/gift/german-beginners-course-express/?couponCode=UDEAFFPC620"><span class="gift-this-course--gift-this-course__icon--RuGjp udi-medium udi udi-gift"></span><span></span></a></div></div>
@@ -319,31 +353,43 @@
     </ul>
 
   </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
+ 
+  <div class="parallax-container valign-wrapper"  id="curso-progreso">
+    <div class="section-no no-pad-bot" style="width: 100%;">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Sección en progreso...</h5>
+          <h2 class=" header col s12 light"><strong>Pronto estará disponible...</strong></h2>
+        </div>
+        <div class="row center">
+          <hr>
+          <p></p><h3 id="comming-soon-time" class="header col s12 light">...</h3>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax" style="filter: blur(4px);"><img src="images/background3.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <div class="container" id="curso-progreso">
+  <div class="container">
     <div class="section">
 
       <h3 class="header ">El curso está en proceso y saldrá pronto...</h3>
-      <p>Ponete en contacto conmigo para obtener un avance del curso <strong>con descuento</strong></p>
+      <p class="left-align light flow-text">Ponete en contacto conmigo para obtener acceso al curso <strong>con descuento!</strong>
+        <br />
+        <br />
+     <i class="material-icons">mail</i> luciarocca.b@gmail.com
+        <br />
 
-      <div class="carousel">
-        <a class="carousel-item" href="#one!"><img src="images/virgo.png"></a>
-        <a class="carousel-item" href="#two!"><img src="images/signs.png"></a>
-        <a class="carousel-item" href="#three!"><img src="images/virgo.png"></a>
+      </p>
+
+      <h4>Previsualización</h4>
+      <div class="carousel carousel-slider" >
+        <a class="carousel-item" href="#one!">  <img src="images/CURSO1.png"></a>
+        <a class="carousel-item" href="#two!">  <img src="images/CURSO2.png"></a>
+        <a class="carousel-item" href="#three!"><img src="images/CURSO3.png"></a>
+        <a class="carousel-item" href="#four!"><img src="images/CURSO4.png"></a>
       </div>
-
+        <br />
+        <br />
     </div>
   </div>
 
