@@ -3,34 +3,34 @@
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
+
   
   //CARGAR CONTENIDO DE CLASES
     [
-    	{title:"Introducción ¿qué es la astrología?",duration:"1:05",items:[
-    	{description:"Historia- de donde viene",enabled:true,duration:"10:05"},
-    	{description:"Componentes de una carta",enabled:false,duration:"8:00"},
+    	{title:"Introducción",duration:"1:05",items:[
+    	{description:"Introducción",enabled:true,duration:"10:05"},
+      {description:'Carta Natal', duration:'02:33'},
     	]},
     	{title:"Planetas",duration:"1:05",items:[
-    	{description:"Planetas introducción",duration:"3:05"},
-    	{description:"Planetass personales",duration:"3:45"},
-      {description:"Planetass sociales",duration:"3:45"},
-    	{description:"Casas y casas angulares",duration:"1:05"},
+        {description:'Planetas personales', duration:'05:03'},
+        {description:'Planetas sociales', duration:'02:20'},
+        {description:'Planetas transpersonales', duration:'02:59'},
     	]},      
 
-      {title:"Signos y elementos...",duration:"30:05",items:[
-      {description:"Pendiente...",duration:"9:05"},
-      {description:"Pendiente...",duration:"9:45"},
-      {description:"Pendiente...",duration:"9:05"},
+      {title:"Signos",duration:"30:05",items:[
+        {description:'Introduccion', duration:'01:52'},
+        {description:'Elementos y modos', duration:'04:44'},
+        {description:'Signos de Aries a Cancer', duration:'07:49'},
+        {description:'Signos de Leo a Escorpio', duration:'07:06'},
+        {description:'Signos de Sagitario a Piscis', duration:'07:54'},
       ]},
-      {title:"Pendiente...",duration:"30:05",items:[
-      {description:"Pendiente...",duration:"9:05"},
-      {description:"Pendiente...",duration:"9:45"},
-      {description:"Pendiente...",duration:"9:05"},
+      {title:"Casas",duration:"30:05",items:[
+        {description:'Introduccion', duration:'02:42'},
+        {description:'Casas del hemisferio inferior', duration:'03:03'},
+        {description:'Casas del hemisferio superior', duration:'03:56'},
+        {description:'Introducción Ascendente', duration:'02:20'},
+        {description:'Final', duration:'00:41'},
       ]},
-
-    	{title:"Ascendente",duration:"6:05",items:[
-    	{description:"Ascendente introducción",duration:"10:05"},
-    	]},
 
     	].forEach((category,index)=>{
     	 $('#contenido-collapsable').append(` <li class="collection">
@@ -61,7 +61,7 @@
 	// CONTADOR DE CUANTO FALTA
 
 	// Set the date we're counting down to
-	var countDownDate = new Date("Jul 25, 2020 15:37:25").getTime();
+	var countDownDate = new Date("Jul 30, 2020 15:37:25").getTime();
 
 	// Update the count down every 1 second
 	var x = setInterval(function() {
@@ -86,7 +86,18 @@
 	  }
 	}, 1000);
 
+
+  // SHOW MORE DESCRIPTION
+
+    const moreBtn = $('#show-more-btn');
+    moreBtn.click(()=>{
+      $('.show-more--container').removeClass("show-more--container");
+      $('.more-text').removeClass("more-text");
+      moreBtn.addClass("more-text");    
     })
+
+
+  })
    
   }); // end of document ready
 })(jQuery); // end of jQuery name space
