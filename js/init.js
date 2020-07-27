@@ -33,7 +33,7 @@
       ]},
 
     	].forEach((category,index)=>{
-    	 $('#contenido-collapsable').append(` <li class="collection">
+    	 $('#contenido-collapsable').append(` <li class="collection ${index==0?'active':''}">
 			<div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i> ${category.title}</div>
         		<div class="collapsible-body" id="video-section-${index}">
 
@@ -47,7 +47,7 @@
 					               ${video.description}
 					            </div>              
 					            <div style="${!video.enabled?'display:none':''}">
-					              <a href="#curso-progreso"> Vista previa</a>
+					              <a href="#promo-video"> Vista previa</a>
 					            </div>    
 					            <div >${video.duration} </div>
           </div`);

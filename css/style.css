@@ -55,3 +55,142 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+
+
+
+
+
+
+
+
+/* --------------my style -------------*/
+.flex{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    .collection-item.flex-start{
+      justify-content: flex-start;
+    }
+
+    .flex .icon-block {
+      max-width: 300px;
+    }
+    .flex-align-center {
+      align-items: center;
+    }
+    .flex-space-between{
+      justify-content: space-between;
+    }
+
+
+    .parallax-container .container {
+      padding-top: 10%;
+    }
+    .parallax-container {
+      height: 80vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .row-striped{
+       background-color: rgba(242,242,242,0.5);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .text-shadow{
+      text-shadow: 1px 1px 19px black;
+    }
+    .primary-background{
+      background-color: #4527a0 !important;
+    }        
+    .image-background{
+      background-color: #171a3d !important;
+    }    
+    .primary-text{
+      color: #5e35b1 !important;
+    }    
+    .primary-text.text-lighten-2{
+      color: #9575cd  !important;
+    }    
+    .primary-text.text-lighten-4{
+      color: #d1c4e9   !important;
+    }
+
+    .sidenav-overlay{
+          z-index: 996;
+    }
+    .start-btn{
+      margin-top: 20%;
+    }
+  .pushpin.curso-card.pin-top{
+    display: none;
+  }
+  .pushpin.curso-card{
+    right: 5px;
+    top: 50%;
+    width: 15%;
+    z-index: 3;
+  }
+  .price-text-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .course-price-text{
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+
+
+  .video-description{
+    flex-grow: 1;
+    margin-left: 5px;
+    max-width: 95%;
+  }
+
+.requirements__list li{
+    list-style: disc!important;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+
+.coupon {
+  display: none; /* TODO : ESTO ES TEMPORAL */
+  border: 5px dotted #bbb;
+  width: 80%;
+  border-radius: 15px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.cutout-text{
+  background-color: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+hr {
+  margin: auto;
+  width: 40%;
+}
+.mini-container{
+  width: 90%;
+}
+
+.show-more--container{
+    -webkit-mask-image: linear-gradient(#fff,#fff,rgba(255,255,255,0));
+}
+.more-text{
+  display: none;
+} 
+.real-text{
+white-space: pre-line
+} 

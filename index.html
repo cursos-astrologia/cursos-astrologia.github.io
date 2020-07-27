@@ -32,170 +32,31 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script type="text/javascript">
 
-
-    /*document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.collapsible');
-    var instances = M.Collapsible.init(elems, {});
-  })
-*/
-  window.onload=()=>{
-    M.AutoInit();
-    var elem = document.querySelector('.collapsible.expandable');
-    var instance = M.Collapsible.init(elem, {
-      accordion: false
-    });
-
-
-    $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
-    $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  });
-  }
-   
-
-  if ( 'serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js').then(function (registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }).catch(function (err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
+    window.onload=()=>{
+      M.AutoInit();
+      var elem = document.querySelector('.collapsible.expandable');
+      var instance = M.Collapsible.init(elem, {
+        accordion: false
       });
-    });
-  }
+
+      $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
+      $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
+    }
+     
+
+    if ( 'serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
 
   </script>
- 
-  <style type="text/css">
-    .flex{
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-    }
-    .collection-item.flex-start{
-      justify-content: flex-start;
-    }
-
-    .flex .icon-block {
-      max-width: 300px;
-    }
-    .flex-align-center {
-      align-items: center;
-    }
-    .flex-space-between{
-      justify-content: space-between;
-    }
-
-
-    .parallax-container .container {
-      padding-top: 10%;
-    }
-    .parallax-container {
-      height: 80vh;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .row-striped{
-       background-color: rgba(242,242,242,0.5);
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    .text-shadow{
-      text-shadow: 1px 1px 19px black;
-    }
-    .primary-background{
-      background-color: #4527a0 !important;
-    }        
-    .image-background{
-      background-color: #171a3d !important;
-    }    
-    .primary-text{
-      color: #5e35b1 !important;
-    }    
-    .primary-text.text-lighten-2{
-      color: #9575cd  !important;
-    }    
-    .primary-text.text-lighten-4{
-      color: #d1c4e9   !important;
-    }
-
-    .sidenav-overlay{
-          z-index: 996;
-    }
-    .start-btm{
-      margin-top: 50%;
-    }
-  .pushpin.curso-card.pin-top{
-    display: none;
-  }
-  .pushpin.curso-card{
-    right: 5px;
-    top: 50%;
-    width: 20%;
-    z-index: 3;
-  }
-  .price-text-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .course-price-text{
-    font-size: 36px;
-    font-weight: 700;
-    margin-right: 10px;
-    white-space: nowrap;
-  }
-
-
-
-  .video-description{
-    flex-grow: 1;
-    margin-left: 5px;
-    max-width: 95%;
-  }
-
-.requirements__list li{
-    list-style: disc!important;
-    margin-left: 10px;
-    padding-left: 10px;
-}
-
-
-.coupon {
-  display: none; /* TODO : ESTO ES TEMPORAL */
-  border: 5px dotted #bbb;
-  width: 80%;
-  border-radius: 15px;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.cutout-text{
-  background-color: white;
-  color: black;
-  mix-blend-mode: screen;
-}
-hr {
-  margin: auto;
-  width: 40%;
-}
-.mini-container{
-  width: 90%;
-}
-
-.show-more--container{
-    -webkit-mask-image: linear-gradient(#fff,#fff,rgba(255,255,255,0));
-}
-.more-text{
-  display: none;
-} 
-  </style>
 
 </head>
 <body>
@@ -229,13 +90,18 @@ hr {
         </div>
 
         <div class="row center">
-          <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background start-btm">Empecemos</a>
+          <a href="#info-curso" id="download-button" class="btn-large waves-effect waves-light primary-background start-btn hide-on-large-only">Empecemos</a>
         </div>
         <br><br>
 
       </div>
     </div>
-    <div class="parallax image-background"><img alt="foto del cielo. en un bosque mirando las estrellas" src="images/background1.jpg" class="hide-on-med-and-down" ></div>
+    <div class="parallax image-background hide-on-large-only" >
+      <img alt="foto del cielo. en un bosque mirando las estrellas" src="images/background1-small.jpg" style="filter: blur(3px);" >
+      </div>
+    <div class="parallax image-backgroun hide-on-med-and-down" >
+      <img alt="foto del cielo. en un bosque mirando las estrellas" src="images/background1.jpg"  >
+    </div>
   </div>
   </div>
 
@@ -251,18 +117,45 @@ hr {
         <p class="left-align light flow-text">
           En este curso nos enfocaremos y explicaremos los <strong>componentes de una carta natal</strong>, así bien cómo interpretarlos.  Veremos la <strong>energía de cada planeta</strong>, cada elemento, <strong>los signos zodiacales</strong> y sus cualidades, las casas astrológicas, el ascendente, el medio cielo, los principales aspectos y una aproximación a cómo se debe abordar la lectura de carta.
         </p>
+    </div>
 
-        <div class="row center"  id="contenido-curso">
-          <a href="#curso-progreso" id="download-button" class="btn-large waves-effect waves-light primary-background">
-          Ir al curso
-        <i class="material-icons right">forward</i></a>
+        <div class="row center card" style="padding: 1rem;">
+          <div class="flex">
+          <p class="left-align light flow-text">
+            El curso está disponible en</p><img style="width: 165px;" src="images/udemy-logo.png" alt="zoom" title="zoom"/><p class="left-align light flow-text">y entrando a través de esta página obtenes un <strong>descuento!</strong>
+          </p>
+            <div class="price-text-container" data-purpose="price-text-container">
+            <div class="course-price-text grey-text text-darken-3 truncate" data-purpose="course-price-text">
+              <span>
+                <span>9,99&nbsp;US$</span>
+              </span>
+            </div>
+            <div class="original-price-container" data-purpose="original-price-container">
+              <div data-purpose="course-old-price-text">
+                <span><s><span>90,99&nbsp;US$</span></s></span>
+              </div>
+            </div>
+            <div class="price-text--lightest grey-text text-darken-1" data-purpose="discount-percentage"><span>&nbsp; 90 % de descuento</span></div>
+          </div>
         </div>
 
-      </div>
+        <div class="row center"  id="contenido-curso">
+          <br/>
+          <a href="#curso-progreso" id="download-button" class="btn-large waves-effect waves-light primary-background">
+          Ir al curso
+          <i class="material-icons right">forward</i></a>
+        </div>
+        </div>
+
+
+
+
+
     </div>
   </div>
-
-  <div class=" coupon grey lighten-5 z-depth-1 curso-card pushpin flex  scale-transition scale-in hide-on-small-only" >
+      
+  <!--
+  <div class="coupon grey lighten-5 z-depth-1 curso-card pushpin flex  scale-transition scale-in hide-on-small-only" >
      <ul class="collapsible " style="margin: 0">
       <li class="active">
          <div class="collapsible-header row-striped"> <h5 class="center">Curso de astrología desde cero</h5> </div>
@@ -287,8 +180,8 @@ hr {
     </div>
     <div >
       <a href="#curso-progreso" id="download-button" class="btn-large waves-effect waves-light primary-background ">Ir al curso</a>
-    <br/>
-<span class="black-text">Este curso incluye:</span>    </div>
+      <br/>
+      <span class="black-text">Este curso incluye:</span>    </div>
     <div class="divider"></div>
     <ul class="collection-no">
       <li class="collection-item flex-start"><i class="material-icons">access_time</i>2,5 horas de vídeo bajo demanda</li>
@@ -297,13 +190,40 @@ hr {
       <li class="collection-item flex-start"><i class="material-icons">laptop</i>Acceso en dispositivos móviles y TV</li>
       <li class="collection-item flex-start"><i class="material-icons">done</i>Certificado de finalización</li>
     </ul>
-
-      <!-- <p><strong>¡Obtene tu cupon de descuento! </strong></p> -->
+ 
       </div>
       </li>
     </ul>
   </div>
+ -->
 
+  <div class="coupon-no grey lighten-5 z-depth-1 curso-card pushpin flex  scale-transition scale-in hide-on-small-only" >
+     <ul class="collapsible " style="margin: 0">
+      <li class="active">
+        <div class="collapsible-header row-striped"> <h5 class="center">Astrología desde cero</h5> </div>
+        <div class="collapsible-body">
+
+          <div class="price-text-container" data-purpose="price-text-container">
+            <div class="course-price-text grey-text text-darken-3 truncate" data-purpose="course-price-text">
+              <span>
+                <span>9,99&nbsp;US$</span>
+              </span>
+            </div>
+            <div class="original-price-container" data-purpose="original-price-container">
+              <div data-purpose="course-old-price-text">
+                <span><s><span>90,99&nbsp;US$</span></s></span>
+              </div>
+            </div>
+            <div class="price-text--lightest grey-text text-darken-1" data-purpose="discount-percentage"><span>90 % de descuento</span></div>
+          </div>
+          <div >
+            <a href="#curso-progreso" id="download-button" class="btn-large waves-effect waves-light primary-background ">Ir al curso</a>
+            <br/>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 
   <div class="container">
     <div class="flex flex-align-center flex-space-between"><h4>Contenido del curso</h4> Duracion total 01:01:28 </div>
@@ -313,34 +233,36 @@ hr {
     </ul>
 
 
-
+  <div class="container" id="promo-video">
+    <h4>Previsualización</h4>
+    <video class="responsive-video" controls>
+      <source src="videos/videopromo.mp4" type="video/mp4">
+    </video>
+</div>
       <h4>Descripción</h4>
-      <p class="left-align light flow-text show-more--container">
-        La astrología estudia la relación entre el cielo y la tierra y puede ser abordada de muchas formas.
-        Este primer curso llamado Astrología desde cero es un primer paso en el estudio de la astrología, necesario para comprender las bases que te permitirán seguir avanzando con cursos más avanzados y específicos.
-        <br /><br/>
-        Por ese motivo, partimos de la base de que no contamos con ningún conocimiento previo acercando los conceptos de forma sencilla para que puedan ser comprendidos por todos y cada uno de los alumnos de este curso.
-        <br /><br/>
-        Con solo conocer el lugar, fecha y hora de nacimiento, vas a poder obtener un montón de información acerca de vos mismo.
-      </p>
+      <p class="left-align light flow-text show-more--container real-text">La astrología estudia la relación entre el cielo y la tierra y puede ser abordada de muchas formas.
+        Este primer curso llamado Astrología desde cero es un <strong>primer paso</strong> en el estudio de la astrología, necesario para comprender las bases que te permitirán seguir avanzando con cursos más avanzados y específicos.
+        
+        Por ese motivo, partimos de la base de que no contamos con <strong> ningún conocimiento previo</strong>  acercando los conceptos de forma sencilla para que puedan ser comprendidos por todos y cada uno de los alumnos de este curso.
+        
+        Con solo conocer el lugar, fecha y hora de nacimiento, vas a poder obtener un montón de información acerca de vos mismo.</p>
         <a id="show-more-btn"  class="waves-effect btn-flat primary-text "><strong> Ver mas</strong> 
           <i class="large material-icons">arrow_drop_down</i>
         </a>
 
-      <div class="left-align light flow-text show-more--container">
-        <p class="more-text flow-text ">
-        Este curso está dirigido a todos aquellos que quieran comenzar a comprender el estudio de los astros y su influencia en nuestra vida.
-        <br /><br/>
+      <div class="left-align light flow-text show-more--container scale-transition scale-in">
+        <p class="more-text flow-text real-text">Este curso está dirigido a todos aquellos que quieran comenzar a comprender el estudio de los astros y <strong> su influencia en nuestra vida</strong>.
+        
         Vamos a ver paso a paso los elementos de una carta natal y cómo interpretarlos. Aprenderemos acerca de la energía de cada planeta,  los signos zodiacales, sus cualidades y elementos y las casas astrológicas.
 
         Comprenderás qué es el ascendente en una carta natal y porqué es uno de los 3 aspectos mas importantes.
-        <br /><br/>
-        El curso está dividido en 15 lecciones visuales, con información sencilla y básica sobre los elementos mas significativos de la astrología y sus características principales.
-        <br /><br/>
+        
+        El curso está dividido en 15 lecciones visuales, con <strong>información sencilla y básica</strong> sobre los elementos mas significativos de la astrología y sus características principales.
+        
         Comenzamos definiendo qué es la astrología y como funciona, para luego analizar en detalle cada uno de sus componentes. Desde los planetas y las luminarias, pasando por la carta natal y los signos, hasta las casas angulares y el ascendente.
-        <br /><br/>
+        
         La terminología utilizada es clara y evitamos usar términos técnicos de difícil comprensión.
-        <br /><br/>
+        
         Gracias por interesarte en este curso y espero que cumpla con todas tus expectativas ♥
       </p>
     </div>
@@ -478,41 +400,32 @@ hr {
 
 
       <h4>Sobre mí</h4>
-      <p class="left-align light flow-text">
+      <p class="left-align light flow-text real-text">
         Hola, mi nombre es Lucía.
 
-Para mi la astrología le da sentido a las cosas y a nuestra existencia. Es una forma de percibir y entender lo que sucede a nuestro alrededor. Lo que nos mueve , nos impulsa, o nos frena.
+Para mi  <strong>la astrología le da sentido a las cosas</strong> y a nuestra existencia. Es una forma de percibir y entender lo que sucede a nuestro alrededor. Lo que nos mueve , nos impulsa, o nos frena.
 
 Son todas energias que estan en nuestra carta y esperan ser desplegadas.
 
-A Través de estos conocimientos podemos descubrir aquellos dones que están esperando salir y aquellos desafíos que en forma continua nos van reflejando en el exterior hasta que aprendamos a trascenderlo. Esta herramienta nos ayuda a encontrar  una mejor versión de nosotros mismos.
+A Través de estos conocimientos podemos descubrir aquellos <strong>dones</strong> que están esperando salir y aquellos <strong>desafíos</strong> que en forma continua nos van reflejando en el exterior hasta que aprendamos a trascenderlo. Esta herramienta nos ayuda a encontrar  una mejor versión de nosotros mismos.
 
 Las cosas pasan por una razón, se pueden decodificar, nada es azar.
 
+<u> En mis cursos trato de hacer contenido: </u>
 
+✔ tan <strong>atractivo</strong> como sea posible
 
-En mis cursos trato de hacer contenido:
+✔ tan <strong>práctico</strong> como sea posible
 
-
-✔ tan atractivo como sea posible
-
-✔ tan práctico como sea posible
-
-✔ fácil de entender y útil
-
+✔ <strong>fácil</strong> de entender y útil
 
 
 Con mis conocimiento de las nuevas tecnologías, busco constantemente formas de presentar la información de la manera más fácil y eficiente, para que pueda ser entendido y apreciado por la mayor cantidad de personas posible.
 
-Tengo mi sitio web exitoso en donde enseño sobre astrología y ofrezco mis servicios para analizar la carta natal y solar.
-
-Si todavía hay cosas que no están claras sobre algún curso, siempre podés escribirme un mensaje e intentaré responder de la manera más rápida posible.
-
-Me encanta lo que hago y espero que también puedan verlo en mis cursos.
+Me encanta lo que hago y espero que también puedan verlo en mi curso.
 
 Te invito a acompañarme  en este recorrido astrológico.
 
- <strong>con descuento!</strong>
       </p>
 
     </div>
