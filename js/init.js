@@ -89,12 +89,22 @@
 
   // SHOW MORE DESCRIPTION
 
-    const moreBtn = $('#show-more-btn');
-    moreBtn.click(()=>{
-      $('.show-more--container').removeClass("show-more--container");
-      $('.more-text').removeClass("more-text");
-      moreBtn.addClass("more-text");    
-    })
+
+    const showHide =(id,triggerElem,shouldAdd)=>{
+      const trigger = shouldAdd? "more":"less";
+      const target = !shouldAdd? "more":"less";
+
+      $(".show-"+trigger+"-"+id+"-container").removeClass("show-"+trigger+"--container").removeClass("show-"+target+"--container");
+      $("."+trigger+"-text").removeClass(trigger+"-text").addClass(target+"-text");
+      triggerElem.removeClass("less-text").addClass("more-text");    
+      $("#show-"+target+"-btn-"+id).addClass("less-text").removeClass("more-text");    
+    }
+
+    const moreBtn = $('#show-more-btn-');
+    moreBtn.click(()=>showHide("",moreBtn,true));    
+    
+    const lessBtn = $('#show-less-btn-');
+    lessBtn.click(()=>showHide("",lessBtn,false));
 
 
   })
