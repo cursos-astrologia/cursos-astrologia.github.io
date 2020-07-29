@@ -8,7 +8,7 @@
   //CARGAR CONTENIDO DE CLASES
     [
     	{title:"Introducción",duration:"1:05",items:[
-    	{description:"Introducción",enabled:true,duration:"10:05"},
+    	{description:"Introducción",enabled:true,duration:"1:13"},
       {description:'Carta Natal', duration:'02:33'},
     	]},
     	{title:"Planetas",duration:"1:05",items:[
