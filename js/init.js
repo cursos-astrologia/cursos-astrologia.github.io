@@ -1,5 +1,8 @@
 (function($){
   $(function(){
+    const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/"
+    const ORIGINAL_PRICE = 99.99
+    const REAL_PRICE = 13.99
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
@@ -41,7 +44,7 @@
 		        </div>
 		      </li>`);
 
-	category.items.forEach((video,itemIndex)=> {$('#video-section-'+index).append(`<div class="flex flex-space-between collection-item">
+	         category.items.forEach((video,itemIndex)=> {$('#video-section-'+index).append(`<div class="flex flex-space-between collection-item">
 					            <i class="material-icons ${!video.enabled?'grey-text text-lighten-1':''}">play_circle_filled</i>
 					            <div class="video-description">
 					               ${video.description}
@@ -53,9 +56,9 @@
           </div`);
 		if (itemIndex<category.items.length-1)
 			$('#video-section-'+index).append(` <div class="divider"> </div`);
-		}
-	 )
-
+    		}
+    	 )
+  })
 
 
 	// CONTADOR DE CUANTO FALTA
@@ -82,7 +85,7 @@
 	  // If the count down is finished, write some text
 	  if (distance < 0) {
 	    clearInterval(x);
-	    document.getElementById("comming-soon-time").innerHTML = "EXPIRED";
+	    document.getElementById("comming-soon-time").innerHTML = "Un poco sobre mí";
 	  }
 	}, 1000);
 
@@ -107,7 +110,20 @@
     lessBtn.click(()=>showHide("",lessBtn,false));
 
 
-  })
+
+
+    $('.go-to-course').click(()=>{
+      console.log(DISCOUNT_PAGE)
+      window.location.href = DISCOUNT_PAGE ;
+    });
+
+    const priceToString =(pr)=> (pr+'').replace('.',',');
+    const discount =priceToString(Math.floor(100-(REAL_PRICE*100)/ORIGINAL_PRICE));
+    $('[data-purpose="discount-percentage"]').empty().append("<span>&nbsp; "+discount+" % de descuento</span>");
+    $('[data-purpose="course-old-price-text"]').empty().append("<span><s><span>"+priceToString(ORIGINAL_PRICE)+"&nbsp;US$</span></s></span>");
+    $('[data-purpose="course-price-text"]').empty().append("<span><span>"+priceToString(REAL_PRICE)+"&nbsp;US$</span></span>");
+
+
    
   }); // end of document ready
 })(jQuery); // end of jQuery name space
