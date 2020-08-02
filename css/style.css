@@ -115,7 +115,7 @@ footer.page-footer {
     .primary-background-outlined{
       color: #4527a0 !important;
       background-color: white; 
-      border: 1px solid rgba(25, 118, 210, 0.5);
+      border: 1px solid #4527a0;
     }        
     .image-background{
       background-color: #171a3d !important;
