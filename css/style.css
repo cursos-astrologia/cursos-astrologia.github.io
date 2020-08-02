@@ -106,6 +106,16 @@ footer.page-footer {
     }
     .primary-background{
       background-color: #4527a0 !important;
+    } 
+
+    .primary-background-outlined:hover{
+      background-color: #4527a0!important;
+      color: white!important; 
+    }     
+    .primary-background-outlined{
+      color: #4527a0 !important;
+      background-color: white; 
+      border: 1px solid rgba(25, 118, 210, 0.5);
     }        
     .image-background{
       background-color: #171a3d !important;
@@ -206,4 +216,7 @@ white-space: pre-line
 }
 .pad-rem-1{
   padding: 1rem;
+}
+.padding-right-5{
+  padding-right: 5px;
 }

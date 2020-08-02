@@ -1,6 +1,7 @@
 (function($){
   $(function(){
-    const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/"
+    const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
+    const GIFT_PAGE = "https://www.udemy.com/gift/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
     const ORIGINAL_PRICE = 99.99
     const REAL_PRICE = 13.99
 
@@ -45,7 +46,7 @@
 		      </li>`);
 
 	         category.items.forEach((video,itemIndex)=> {$('#video-section-'+index).append(`<div class="flex flex-space-between collection-item">
-					            <i class="material-icons ${!video.enabled?'grey-text text-lighten-1':''}">play_circle_filled</i>
+					            <i class="material-icons ${!video.enabled?'grey-text':''}">play_circle_filled</i>
 					            <div class="video-description">
 					               ${video.description}
 					            </div>              
@@ -111,11 +112,9 @@
 
 
 
-
-    $('.go-to-course').click(()=>{
-      console.log(DISCOUNT_PAGE)
-      window.location.href = DISCOUNT_PAGE ;
-    });
+    const addLink = (selector,link)=> $(selector).attr("href", link).attr("rel","noreferrer").attr("target","_blank");
+    addLink('.go-to-course',DISCOUNT_PAGE);
+    addLink('.gift-to-course',GIFT_PAGE);
 
     const priceToString =(pr)=> (pr+'').replace('.',',');
     const discount =priceToString(Math.floor(100-(REAL_PRICE*100)/ORIGINAL_PRICE));
