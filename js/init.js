@@ -3,7 +3,7 @@
     const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
     const GIFT_PAGE = "https://www.udemy.com/gift/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
     const ORIGINAL_PRICE = 99.99
-    const REAL_PRICE = 13.99
+    const REAL_PRICE = 14.99
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();

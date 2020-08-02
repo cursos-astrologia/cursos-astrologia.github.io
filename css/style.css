@@ -83,7 +83,13 @@ footer.page-footer {
     .flex-space-between{
       justify-content: space-between;
     }
+   .flex-space-arround{
+      justify-content: space-around;
+    }
 
+    .max-width-45 {
+      max-width: 45%;
+    }
 
     .parallax-container .container {
       padding-top: 10%;
@@ -134,7 +140,7 @@ footer.page-footer {
           z-index: 996;
     }
     .start-btn{
-      margin-top: 20%;
+      margin-top: 10%;
     }
   .pushpin.curso-card.pin-top{
     display: none;
@@ -212,11 +218,20 @@ white-space: pre-line
 .main-text{
     font-family: 'myMontserrat';
     font-weight: bold;
-    /*font-size: 22px;*/
 }
+.main-text-big{
+    font-size: 90px;
+}
+
 .pad-rem-1{
   padding: 1rem;
 }
 .padding-right-5{
   padding-right: 5px;
+}
+.margin-sm{
+      margin: 4px;
+}
+.no-header{
+  border-bottom: 0px solid #fff!important;
 }
