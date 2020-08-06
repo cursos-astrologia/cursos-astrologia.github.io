@@ -65,7 +65,7 @@ footer.page-footer {
 
 
 /* --------------my style -------------*/
-.flex{
+    .flex{
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -86,9 +86,25 @@ footer.page-footer {
    .flex-space-arround{
       justify-content: space-around;
     }
+    .flex-column{
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-grow-1{
+      flex-grow: 1;
+    }
+    .flex-no-wrap{
+      flex-wrap: nowrap;
+    }
 
+    .full-height{
+      height: 100vh;
+    }
     .max-width-45 {
       max-width: 45%;
+    }
+    .flex-start{
+      justify-content: flex-start;
     }
 
     .parallax-container .container {
@@ -234,4 +250,21 @@ white-space: pre-line
 }
 .no-header{
   border-bottom: 0px solid #fff!important;
+}
+
+.avatar{
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  background: rgb(156, 70, 127); 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  object-fit: cover;
+  color: #fff;
+}
+.avatar-container{
+      display: block;
+    padding: 0 2.4rem 0 0;
 }
