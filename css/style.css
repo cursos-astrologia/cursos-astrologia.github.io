@@ -100,8 +100,8 @@ footer.page-footer {
     .full-height{
       height: 100vh;
     }
-    .max-width-45 {
-      max-width: 45%;
+    .max-width-310 {
+      max-width: 310px;
     }
     .flex-start{
       justify-content: flex-start;

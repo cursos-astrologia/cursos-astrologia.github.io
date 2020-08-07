@@ -47,7 +47,7 @@
 		      </li>`);
 
 	         category.items.forEach((video,itemIndex)=> {$('#video-section-'+index).append(`<div class="flex flex-space-between collection-item">
-					            <i class="material-icons ${!video.enabled?'grey-text':''}">play_circle_filled</i>
+					            <i class="material-icons ${!video.enabled?'grey-text text-darken-1':'primary-text'}">play_circle_filled</i>
 					            <div class="video-description">
 					               ${video.description}
 					            </div>              
