@@ -100,8 +100,8 @@ footer.page-footer {
     .full-height{
       height: 100vh;
     }
-    .max-width-310 {
-      max-width: 310px;
+    .max-width-500 {
+      max-width: 500px;
     }
     .flex-start{
       justify-content: flex-start;
@@ -237,6 +237,13 @@ white-space: pre-line
 }
 .main-text-big{
     font-size: 90px;
+}
+
+.first-main-text{
+    font-size: 60px;
+}
+.second-main-text{
+  font-size: 2.56rem;
 }
 
 .pad-rem-1{
