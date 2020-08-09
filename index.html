@@ -34,12 +34,21 @@
   <meta name="twitter:image" content="images/logo192.png"> 
   <meta name="twitter:title" content="astrología"> 
   <meta name="twitter:description" content="astrología"> 
+  
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-  <!-- CSS  -->
+  <!-- CSS  
+<link href="css/materialize-essentials.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
   <script src="js/modernizer.js"></script>
+
+
+   <noscript id="all-deferred-styles">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen,projection"/>
+  </noscript>
 
   <script type="text/javascript">
 
@@ -74,12 +83,29 @@
       });
     }
 
+    var loadDeferredStyles = function(id) {
+      var addStylesNode = document.getElementById(id);
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement);
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    let src = 'all-deferred-styles';
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles(src), 0); });
+     else window.addEventListener('load', loadDeferredStyles(src));
+
 
   </script>
   <style type="text/css">
     .bgimg-1{
       background-color: #171a3d;
     }
+   
+    .primary-background{
+      background-color: #4527a0 !important;
+    } 
   </style>
 
 </head>

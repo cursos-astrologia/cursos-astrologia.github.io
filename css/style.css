@@ -126,9 +126,7 @@ footer.page-footer {
     .text-shadow{
       text-shadow: 1px 1px 19px black;
     }
-    .primary-background{
-      background-color: #4527a0 !important;
-    } 
+
 
     .primary-background-outlined:hover{
       background-color: #4527a0!important;
