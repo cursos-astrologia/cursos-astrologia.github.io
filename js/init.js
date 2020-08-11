@@ -1,4 +1,25 @@
 (function($){
+
+
+    window.onload=()=>{
+      M.AutoInit();
+      var elem = document.querySelector('.collapsible.expandable');
+      var instance = M.Collapsible.init(elem, {
+        accordion: false
+      });
+
+      $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
+      $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
+      setInterval(()=>$('.carousel.carousel-slider.move').carousel("next"),20000)
+   
+
+      const link = 'images/background1-small.';
+      $('.no-webp .bgimg-1').attr("src", link+"jpg")
+      $('.webp .bgimg-1').attr("src", link+"webp")
+
+    }
+    
+
   $(function(){
     const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
     const GIFT_PAGE = "https://www.udemy.com/gift/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
