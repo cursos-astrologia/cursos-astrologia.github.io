@@ -1,23 +1,23 @@
 (function($){
+  const MY_BLOG1="https://docs.google.com/document/d/1djktDmAItqN5jrTwiaEeCw51Klv85P7U8khLc6-gCOI/edit?usp=sharing"
 
+  window.onload=()=>{
+    M.AutoInit();
+    var elem = document.querySelector('.collapsible.expandable');
+    var instance = M.Collapsible.init(elem, {
+      accordion: false
+    });
 
-    window.onload=()=>{
-      M.AutoInit();
-      var elem = document.querySelector('.collapsible.expandable');
-      var instance = M.Collapsible.init(elem, {
-        accordion: false
-      });
+    $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
+    $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
+    setInterval(()=>$('.carousel.carousel-slider.move').carousel("next"),20000)
+ 
 
-      $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
-      $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
-      setInterval(()=>$('.carousel.carousel-slider.move').carousel("next"),20000)
-   
+    const link = 'images/background1-small.';
+    $('.no-webp .bgimg-1').attr("src", link+"jpg")
+    $('.webp .bgimg-1').attr("src", link+"webp")
 
-      const link = 'images/background1-small.';
-      $('.no-webp .bgimg-1').attr("src", link+"jpg")
-      $('.webp .bgimg-1').attr("src", link+"webp")
-
-    }
+  }
     
 
   $(function(){
@@ -144,6 +144,16 @@
     $('[data-purpose="course-old-price-text"]').empty().append("<span><s><span>"+priceToString(ORIGINAL_PRICE)+"&nbsp;US$</span></s></span>");
     $('[data-purpose="course-price-text"]').empty().append("<span><span>"+priceToString(REAL_PRICE)+"&nbsp;US$</span></span>");
 
+
+
+    function htmlDecode(input){
+    var e = document.createElement('textarea');e.innerHTML = input;// handle case of empty input
+    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+  const loadBlogs =()=> fetch(MY_BLOG1,{'Access-Control-Allow-Origin':"*", 'Access-Control-Allow-Headers':"*"}).then(r=>r.text())
+  .then(t=>t.split("[---]")[1])
+  .then(e=>$('#blogs').append(htmlDecode(e)))
 
    
   }); // end of document ready
