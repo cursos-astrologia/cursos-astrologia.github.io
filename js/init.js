@@ -1,5 +1,4 @@
 (function($){
-  const MY_BLOG1="https://docs.google.com/document/d/1djktDmAItqN5jrTwiaEeCw51Klv85P7U8khLc6-gCOI/edit?usp=sharing"
 
   window.onload=()=>{
     M.AutoInit();
@@ -145,15 +144,6 @@
     $('[data-purpose="course-price-text"]').empty().append("<span><span>"+priceToString(REAL_PRICE)+"&nbsp;US$</span></span>");
 
 
-
-    function htmlDecode(input){
-    var e = document.createElement('textarea');e.innerHTML = input;// handle case of empty input
-    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
-    }
-
-  const loadBlogs =()=> fetch(MY_BLOG1,{'Access-Control-Allow-Origin':"*", 'Access-Control-Allow-Headers':"*"}).then(r=>r.text())
-  .then(t=>t.split("[---]")[1])
-  .then(e=>$('#blogs').append(htmlDecode(e)))
 
    
   }); // end of document ready
