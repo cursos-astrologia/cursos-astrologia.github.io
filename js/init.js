@@ -143,6 +143,7 @@
     $('[data-purpose="course-old-price-text"]').empty().append("<span><s><span>"+priceToString(ORIGINAL_PRICE)+"&nbsp;US$</span></s></span>");
     $('[data-purpose="course-price-text"]').empty().append("<span><span>"+priceToString(REAL_PRICE)+"&nbsp;US$</span></span>");
 
+      console.log("hola")
 
 
    
