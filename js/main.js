@@ -1,6 +1,6 @@
 function main() {
-	 const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
-    const GIFT_PAGE = "https://www.udemy.com/gift/astrologia-desde-cero/?couponCode=PROMOAGOSTO"
+	 const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/?couponCode=PROMSEP_2020"
+	 const GIFT_PAGE = "https://www.udemy.com/gift/astrologia-desde-cero/?couponCode=PROMSEP_2020"
  
 
     const addLink = (selector,link)=> $(selector).attr("href", link).attr("rel","noreferrer").attr("target","_blank");

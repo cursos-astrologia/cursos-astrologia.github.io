@@ -21,7 +21,7 @@
 
   $(function(){
     const ORIGINAL_PRICE = 99.99
-    const REAL_PRICE = 14.99
+    const REAL_PRICE = 12.99
 
 
     $('.sidenav').sidenav();
