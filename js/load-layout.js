@@ -38,7 +38,16 @@ const layout =()=> {
       </div>
     </footer>`)
 
-    $('head').append(`<link rel="icon" href="favico.png" type="image/png" sizes="16x16">
+    $('head').append(`<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123383467-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123383467-2');
+</script>
+<link rel="icon" href="favico.png" type="image/png" sizes="16x16">
 	<meta http-equiv="Cache-Control" content="max-age=3600">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
