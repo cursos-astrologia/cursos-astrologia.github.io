@@ -2,17 +2,17 @@ const layout =()=> {
 	$('#nav-container').append(`<div class="navbar-fixed">
       <nav class="primary-background " role="navigation">
         <div class="nav-wrapper container ">
-          <a id="logo-container" href="https://leonardo-rocca.github.io/cursos-astrologia" class="brand-logo  white-text main-text">Astrología</a>
+          <a id="logo-container" href="https://cursos-astrologia.github.io" class="brand-logo  white-text main-text">Astrología</a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="https://leonardo-rocca.github.io/cursos-astrologia/#contenido-curso"  class="white-text">Contenido</a></li>
-            <li><a href="https://leonardo-rocca.github.io/cursos-astrologia/#curso-requisitos" class="white-text">Preguntas frecuentes</a></li>
-            <li><a href="https://leonardo-rocca.github.io/cursos-astrologia/#curso-sobre-mi" class="white-text">Sobre mí</a></li>
+            <li><a href="https://cursos-astrologia.github.io/#contenido-curso"  class="white-text">Contenido</a></li>
+            <li><a href="https://cursos-astrologia.github.io/#curso-requisitos" class="white-text">Preguntas frecuentes</a></li>
+            <li><a href="https://cursos-astrologia.github.io/#curso-sobre-mi" class="white-text">Sobre mí</a></li>
           </ul>
 
           <ul id="nav-mobile" class="sidenav">
-            <li><a href="https://leonardo-rocca.github.io/cursos-astrologia/#contenido-curso"  class="primary-text">Contenido</a></li>
-            <li><a href="https://leonardo-rocca.github.io/cursos-astrologia/#curso-requisitos" class="primary-text">Preguntas frecuentes</a></li>
-            <li><a href="https://leonardo-rocca.github.io/cursos-astrologia/#curso-sobre-mi" class="primary-text">Sobre mí</a></li>
+            <li><a href="https://cursos-astrologia.github.io/#contenido-curso"  class="primary-text">Contenido</a></li>
+            <li><a href="https://cursos-astrologia.github.io/#curso-requisitos" class="primary-text">Preguntas frecuentes</a></li>
+            <li><a href="https://cursos-astrologia.github.io/#curso-sobre-mi" class="primary-text">Sobre mí</a></li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger  white-text"><i class="material-icons">menu</i></a>
         </div>
@@ -69,7 +69,7 @@ const layout =()=> {
   <meta property="og:title" content="astrología conceptos basicos"> 
   <meta property="og:description" content="astrología desde cero. Curso basico"> 
   <meta property="og:site_name" content="Astrología"> 
-  <meta property="og:url" content="https://leonardo-rocca.github.io/cursos-astrologia/"> 
+  <meta property="og:url" content="https://cursos-astrologia.github.io/"> 
   <meta name="twitter:card" content="astrología"> 
   <meta name="twitter:image" content="images/logo192.png"> 
   <meta name="twitter:title" content="astrología"> 
