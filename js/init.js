@@ -141,6 +141,25 @@
     $('[data-purpose="course-price-text"]').empty().append("<span><span>"+priceToString(REAL_PRICE)+"&nbsp;US$</span></span>");
 
    
+  const blogs = [
+  {title:"¿Qué es el signo ascendente?", img:"images/blogs/fondo-blog-1.JPG",link:"que-es-signo-ascendente.html",desc:"Todo lo que necesitas saber ¿Qué es?¿Qué significa? ¿Alguien dijo signo ascendente? Revelamos todas las incógnitas."},
+  {title:"¿Cómo leer una carta astral?", img:"images/blogs/fondo-blog-2.JPG",link:"como-leer-carta-astral.html",desc:"La astrología es un tema hermoso, pero como todo estudio tiene sus dificultades y sus propias reglas. Acá te cuento cómo encarar la lectura de una carta astral."},
+  {title:"Aprender astrología fácil", img:"images/blogs/fondo-blog-3.JPG",link:"aprender-astrologia-facil.html",desc:"Acá encontraras el contenido del curso para poder aprender astrología de una manera muy fácil"},
+ ]
+
+ blogs.forEach(blog=>  $("#blogs-container").append(` <div class="card max-width-400 card-action">
+        <a href="${blog.link}">
+        <div class="card-image">
+          <img src="${blog.img}">
+          <span class="card-title"><strong>${blog.title}</strong></span>
+        </div>
+        <div class="card-content primary-text">
+          <p>${blog.desc}</p>
+        </div>
+        </a>
+      </div>`))
+
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 

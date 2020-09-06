@@ -103,6 +103,9 @@ footer.page-footer {
     .max-width-500 {
       max-width: 500px;
     }
+    .max-width-400 {
+      max-width: 400px;
+    }
     .flex-start{
       justify-content: flex-start;
     }
