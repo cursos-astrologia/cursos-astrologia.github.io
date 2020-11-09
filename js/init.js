@@ -129,10 +129,7 @@
     const lessBtn = $('#show-less-btn-');
     lessBtn.click(()=>showHide("",lessBtn,false));
 
-    console.log("333")
-
     main()
-    console.log("444")
 
     const priceToString =(pr)=> (pr+'').replace('.',',');
     const discount =priceToString(Math.floor(100-(REAL_PRICE*100)/ORIGINAL_PRICE));
