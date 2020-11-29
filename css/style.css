@@ -157,7 +157,7 @@ footer.page-footer {
           z-index: 996;
     }
     .start-btn{
-      margin-top: 10%;
+    /*  margin-top: 10%;*/
     }
   .pushpin.curso-card.pin-top{
     display: none;
@@ -229,7 +229,7 @@ white-space: pre-line
 } 
 @font-face {
   font-family: myMontserrat;
-  src: url(Montserrat/Montserrat-Bold.ttf);
+  src: url(Montserrat/Montserrat-Regular.ttf);
 }
 
 .main-text{
@@ -237,7 +237,19 @@ white-space: pre-line
     font-weight: bold;
 }
 .main-text-big{
-    font-size: 90px;
+    font-size: 60px;
+}
+.main-text-small{
+    font-size: 40px;
+}
+.monserrat{
+    font-family: 'myMontserrat';
+}
+.title-description{
+    font-family: 'myMontserrat';
+    font-size: 2rem;
+    padding-left:  15%;
+    padding-right: 15%;
 }
 
 .first-main-text{
@@ -275,4 +287,10 @@ white-space: pre-line
 .avatar-container{
       display: block;
     padding: 0 2.4rem 0 0;
+}
+
+.profile-img{
+    width: 17rem;
+  height: 17rem;
+  margin-right: 20px;
 }
