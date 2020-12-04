@@ -5,7 +5,8 @@ function main() {
 	 const GIFT_PAGE = "https://www.udemy.com/gift/astrologia-desde-cero/?couponCode=CURSOASTRODESC"+sufix;
  
 
-    const addLink = (selector,link)=> $(selector).attr("href", link).attr("rel","noreferrer").attr("target","_blank");
+    const addLink = (selector,link)=> $(selector).attr("href", link).attr("rel","noreferrer").attr("target","_blank")
+        .click((e)=>{gtag_report_conversion && gtag_report_conversion(); return e});
     addLink('.go-to-course',DISCOUNT_PAGE);
     addLink('.gift-to-course',GIFT_PAGE);
     

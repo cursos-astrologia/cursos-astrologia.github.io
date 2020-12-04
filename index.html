@@ -3,6 +3,36 @@
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123383467-2"></script>
+<!-- Global site tag (gtag.js) - Google Ads: 595539885 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-595539885"></script>
+<!-- Event snippet for Ir a udemy conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-595539885/K170CJniqewBEK3v_JsC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-595539885');
+</script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -181,7 +211,7 @@
 
         <h2 class="center  second-main-text"><i class="mdi-content-send "></i>Cómo aprender astrología paso a paso</h2>
         <p class="left-align light flow-text real-text">Lo importante en la astrología, es que entiendas los conceptos y la esencia de las energías que manejan los <strong>signos, planetas y casas</strong>. Ese el el primer paso y es fundamental.
-        Por eso en el curso, te explico detalladamente todo lo que necesitas saber para que a partir de una base sólida puedas seguir profundizando y sumando conocimiento. 
+        Por eso en este curso (con <strong>+1700 inscriptos</strong>), te explico detalladamente todo lo que necesitas saber para que a partir de una base sólida puedas seguir profundizando y sumando conocimiento. 
         
         La astrología es una herramienta muy útil para <strong>descubrirnos a nosotros mismos</strong>👨 👩. Una herramienta muy útil para todos, para volvernos más conscientes. 
         
@@ -218,12 +248,6 @@
             <i class="material-icons right">forward</i></a>
           </div>
         </div>
-
-          <h3>De que se trata Astrología desde cero.</h3>
-          <p class="left-align light flow-text">
-          Este primer curso de astrología, llamado Astrología desde cero es un <strong>primer paso</strong> en el estudio de los astros, necesario para comprender las bases que te permitirán seguir avanzando con cursos más avanzados y específicos.
-          Por ese motivo, partimos de la base de que no contamos con <strong> ningún conocimiento previo</strong>  acercando los conceptos de forma sencilla para que puedan ser comprendidos por todos y cada uno de los alumnos de este curso.
-          </p>
 
           <h3> Lo que aprenderás en este curso</h3>
           <br>
@@ -287,7 +311,7 @@
 
     <a href="#curso-pro" id="go-to-course-float-cupon" class="fixed-action-btn btn-large btn-floating waves-effect waves-light primary-background go-to-course"  title="ir al curso online de astrología">
 
-        <i class="material-icons">school</i></a>
+        <i class="material-icons">info_outline</i></a>
   </div>
  <!-- /////////////////CUPON FLOTANTE //////////////// -->
 
@@ -383,10 +407,10 @@
         Está pensado para explicar estos elementos básicos, de una forma que se entienda, que sea fácil y que quede claro. Vemos la astrología como un recurso más que nos permite llegar al <strong>autoconocimiento</strong>.
       </p>
 
-      <h3>¿De qué trata? </h3>
-        <p class="flow-text real-text light">En este curso se van a ver los elementos básicos que tiene este estudio. Es un primer acercamiento para ver qué es y cómo funciona la astrología. Les va a brindar una comprensión clara de estos <strong>conceptos básicos</strong>, lo cual es fundamental para empezar a abordar este tema, ya que son nuestro punto de partida. A partir de una <strong>base sólida</strong> podemos seguir aprendiendo.
-
-        Los temas que vamos a abordar van a ser los siguientes: Vamos a tener una pequeña introducción para ver <strong>qué es y cómo funciona</strong> el estudio de la astrología, y  luego iremos abordando los diferentes componentes fundamentales que son los planetas, los signos zodiacales y las casas astrológicas.
+      <h3>¿De qué se trata Astrología desde cero?</h3>
+      <p class="left-align light flow-text">
+        Este primer curso de astrología, llamado Astrología desde cero es un <strong>primer paso</strong> en el estudio de los astros, necesario para comprender las bases que te permitirán seguir avanzando con cursos más avanzados y específicos.
+        Por ese motivo, partimos de la base de que no contamos con <strong> ningún conocimiento previo</strong>  acercando los conceptos de forma sencilla para que puedan ser comprendidos por todos y cada uno de los alumnos de este curso.
       </p>
 
 
@@ -436,99 +460,15 @@
 
 
       <h4>Comentarios</h4>
-      <div class="carousel carousel-slider move" >
-        <a class="carousel-item flex flex-align-center mini-container" href="#one!">
-          <div class="container center card pad-rem-1 flex flex-align-center flex-start flex-space-between flex-no-wrap">
-            <div class="avatar-container">
-              <div class="avatar purple lighten-2 flex-grow-1 hide-on-med-and-down">LR</div>
-            </div>
-            <div class="black-text">
-              <h5>Laura R.</h5>
-              <span>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              </span>
-              <p class="flow-text">
-                Me gustó mucho el curso, los conceptos están muy bien explicados, con mucha claridad. Me sirvió para obtener y entender mi carta natal y usarlo como fuente de consulta al analizar la carta.
-              </p>
+      <div  id="comments-container-wrapper" class="flex flex-align-center flex-no-wrap" >
+        <a id="prevCom" class="btn-flat btn-small waves-effect waves-light primary-background-outlined "><i class="material-icons">chevron_left</i></a>
+       
+        <div  id="comments-container" class="carousel carousel-slider move" >
+         
+       </div>
+        <a id="nextCom" class="btn-flat btn-small waves-effect waves-light primary-background-outlined"><i class="material-icons">chevron_right</i></a>
 
-            </div>
-          </div>
-        </a>        
-
-        <a class="carousel-item flex flex-align-center mini-container" href="#two!">
-          <div class="container center card pad-rem-1 flex flex-align-center  flex-start flex-space-between flex-no-wrap">
-            <div class="avatar-container">
-            <div class="avatar light-blue darken-4 circle hide-on-med-and-down">EP</div>
-          </div>
-            <div class="black-text">
-              <h5>Edu P.</h5>
-              <span>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons  darken-4">star</i>
-              </span>
-              <p class="flow-text">
-                Me parece muy interesante
-              </p>
-
-            </div>
-          </div>
-        </a>        
-
-
-        <a class="carousel-item flex flex-align-center mini-container" href="#three!">
-          <div class="container center card pad-rem-1 flex flex-align-center  flex-start flex-space-between flex-no-wrap">
-            <div class="avatar-container">
-            <div class="avatar blue darken-1 circle hide-on-med-and-down">LR</div>
-          </div>
-            <div class="black-text">
-              <h5>Leo R.</h5>
-              <span>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              </span>
-              <p class="flow-text">
-                Muy bueno 👏
-                Los conceptos están explicados de forma clara y concisa. Me gustó lo de las luminarias.
-                Lo recomiendo!
-              </p>
-
-            </div>
-          </div>
-        </a>
-
-        <a class="carousel-item flex flex-align-center mini-container" href="#three!">
-          <div class="container center card pad-rem-1 flex flex-align-center  flex-start flex-space-between flex-no-wrap">
-            <div class="avatar-container">
-            <div class="avatar indigo darken-1 circle hide-on-med-and-down">MS</div>
-          </div>
-            <div class="black-text">
-              <h5>Marcelo</h5>
-              <span>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              <i class="material-icons orange-text text-darken-4">star</i>
-              </span>
-              <p class="flow-text">
-                Muy bueno el curso, sigue así.
-              </p>
-
-            </div>
-          </div>
-        </a>
       </div>
-
 
 
       <h3>Blogs</h3>

@@ -9,8 +9,8 @@
 
     $('.pushpin.curso-card').pushpin({offset:50,top:1200/*,bottom:2500*/});
     $('.carousel.carousel-slider').carousel({fullWidth: true,indicators: true});
-    setInterval(()=>$('.carousel.carousel-slider.move').carousel("next"),20000)
- 
+    const nextComment = () => $('.carousel.carousel-slider.move').carousel("next"); 
+    setInterval(nextComment,30000)
 
     const link = 'images/background1-small.';
     $('.no-webp .bgimg-1').attr("src", link+"jpg")
@@ -154,8 +154,139 @@
           <p>${blog.desc}</p>
         </div>
         </a>
-      </div>`))
+      </div>`));
 
+
+ const comments = [
+{name:"Laura R",avatar:"LR",stars:5,color:"purple lighten-2", description:"Me gustó mucho el curso, los conceptos están muy bien explicados, con mucha claridad. Me sirvió para obtener y entender mi carta natal y usarlo como fuente de consulta al analizar la carta." },
+{name:"Edu P.",avatar:"EP",stars:4,color:"light-blue darken-4", description:"Me parece muy interesante" },
+{name:"Leo ",avatar:"LR",stars:5,color:"blue darken-1 ", description:"Muy bueno 👏 Los conceptos están explicados de forma clara y concisa. Me gustó lo de las luminarias. Lo recomiendo!" },
+{name:"Marcelo",avatar:"MS",stars:5,color:"indigo darken-1 ", description:"Para quienes queremos acercarnos a estos temas arrancando desde 0, nos encontramos con explicaciones claras, sencillas y didácticas, que acrecientan el interés por los mismos, para continuar profundizando." },
+{name:"Yammel Maron.",avatar:"YM",stars:4,color:"light-blue darken-4", description:"Me esta gustando mucho como explica y como se esta llevando el curso, muy buena información introductoria para saber que es la Astrologia y como se compone, espero poder tomar mas para completar mi estudio. Gracias" },
+ ];
+
+ const starClass = (stars,index) => index<stars?"orange-text text-darken-4":"darken-4";
+ comments.forEach(com=>  $("#comments-container").append(`<a class="carousel-item flex flex-align-center mini-container" href="#one!">
+          <div class="container center card pad-rem-1 flex flex-align-center flex-start flex-space-between flex-no-wrap">
+            <div class="avatar-container">
+              <div class="avatar ${com.color} flex-grow-1 hide-on-med-and-down">${com.avatar}</div>
+            </div>
+            <div class="black-text">
+              <h5>${com.name}</h5>
+              <span>
+              <i class="material-icons ${starClass(com.stars,0)}  ">star</i>
+              <i class="material-icons ${starClass(com.stars,1)} ">star</i>
+              <i class="material-icons ${starClass(com.stars,2)} ">star</i>
+              <i class="material-icons ${starClass(com.stars,3)} ">star</i>
+              <i class="material-icons ${starClass(com.stars,4)} ">star</i>
+              </span>
+              <p class="flow-text">
+                ${com.description}
+              </p>
+
+            </div>
+          </div>
+        </a>`));
+
+
+    const nextComment = () => $('.carousel.carousel-slider.move').carousel("next"); 
+    const prevComment = () => $('.carousel.carousel-slider.move').carousel("prev"); 
+    $("#nextCom").click(nextComment)
+    $("#prevCom").click(prevComment)
+
+
+/*
+         <a class="carousel-item flex flex-align-center mini-container" href="#one!">
+          <div class="container center card pad-rem-1 flex flex-align-center flex-start flex-space-between flex-no-wrap">
+            <div class="avatar-container">
+              <div class="avatar purple lighten-2 flex-grow-1 hide-on-med-and-down">LR</div>
+            </div>
+            <div class="black-text">
+              <h5>Laura R.</h5>
+              <span>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              </span>
+              <p class="flow-text">
+                Me gustó mucho el curso, los conceptos están muy bien explicados, con mucha claridad. Me sirvió para obtener y entender mi carta natal y usarlo como fuente de consulta al analizar la carta.
+              </p>
+
+            </div>
+          </div>
+        </a>        
+
+        <a class="carousel-item flex flex-align-center mini-container" href="#two!">
+          <div class="container center card pad-rem-1 flex flex-align-center  flex-start flex-space-between flex-no-wrap">
+            <div class="avatar-container">
+            <div class="avatar light-blue darken-4 circle hide-on-med-and-down">EP</div>
+          </div>
+            <div class="black-text">
+              <h5>Edu P.</h5>
+              <span>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons  darken-4">star</i>
+              </span>
+              <p class="flow-text">
+                Me parece muy interesante
+              </p>
+
+            </div>
+          </div>
+        </a>        
+
+
+        <a class="carousel-item flex flex-align-center mini-container" href="#three!">
+          <div class="container center card pad-rem-1 flex flex-align-center  flex-start flex-space-between flex-no-wrap">
+            <div class="avatar-container">
+            <div class="avatar blue darken-1 circle hide-on-med-and-down">LR</div>
+          </div>
+            <div class="black-text">
+              <h5>Leo R.</h5>
+              <span>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              </span>
+              <p class="flow-text">
+                Muy bueno 👏
+                Los conceptos están explicados de forma clara y concisa. Me gustó lo de las luminarias.
+                Lo recomiendo!
+              </p>
+
+            </div>
+          </div>
+        </a>
+
+        <a class="carousel-item flex flex-align-center mini-container" href="#three!">
+          <div class="container center card pad-rem-1 flex flex-align-center  flex-start flex-space-between flex-no-wrap">
+            <div class="avatar-container">
+            <div class="avatar indigo darken-1 circle hide-on-med-and-down">MS</div>
+          </div>
+            <div class="black-text">
+              <h5>Marcelo</h5>
+              <span>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              <i class="material-icons orange-text text-darken-4">star</i>
+              </span>
+              <p class="flow-text">
+                Muy bueno el curso, sigue así.
+              </p>
+
+            </div>
+          </div>
+        </a>
+*/
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
