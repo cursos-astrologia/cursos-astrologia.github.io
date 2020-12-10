@@ -195,6 +195,51 @@
     $("#prevCom").click(prevComment)
 
 
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+
+
+
+
+
+
+
+
+
+
+/*
+ <li class="active">
+        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Video Introductorio al curso dignidades esenciales para astrologos </div>
+        <div class="collapsible-body">
+          <div class="flex flex-space-between">
+            <i class="material-icons ">play_circle_filled</i>
+            <div class="video-description">
+              En este video les cuento de que se trata el curso de dignidades esenciales, a quien esta dirigido y que habrán aprendido al finalizar el curso.
+            </div>              
+            <div >
+              <a href="#udemy"> Vista previa</a>
+            </div>    
+            <div >
+              1:05
+            </div>
+          </div>
+          <div class="divider"></div>            
+          <div class="row">
+            <div class="col s12 m8">
+              Introducción a dignidades esenciales, elementos y cualidades de los signos.
+            </div>              
+            <div class="col s12 m2">
+              <a href="#udemy"> Vista previa</a>
+            </div>    
+            <div class="col s12 m2">
+              2:05
+            </div>
+          </div>
+
+        </div>
+      </li>*/
+
+
 /*
          <a class="carousel-item flex flex-align-center mini-container" href="#one!">
           <div class="container center card pad-rem-1 flex flex-align-center flex-start flex-space-between flex-no-wrap">
@@ -287,48 +332,3 @@
           </div>
         </a>
 */
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
-
-
-
-
-
-
-
-
-
-/*
- <li class="active">
-        <div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i>Video Introductorio al curso dignidades esenciales para astrologos </div>
-        <div class="collapsible-body">
-          <div class="flex flex-space-between">
-            <i class="material-icons ">play_circle_filled</i>
-            <div class="video-description">
-              En este video les cuento de que se trata el curso de dignidades esenciales, a quien esta dirigido y que habrán aprendido al finalizar el curso.
-            </div>              
-            <div >
-              <a href="#udemy"> Vista previa</a>
-            </div>    
-            <div >
-              1:05
-            </div>
-          </div>
-          <div class="divider"></div>            
-          <div class="row">
-            <div class="col s12 m8">
-              Introducción a dignidades esenciales, elementos y cualidades de los signos.
-            </div>              
-            <div class="col s12 m2">
-              <a href="#udemy"> Vista previa</a>
-            </div>    
-            <div class="col s12 m2">
-              2:05
-            </div>
-          </div>
-
-        </div>
-      </li>*/
-

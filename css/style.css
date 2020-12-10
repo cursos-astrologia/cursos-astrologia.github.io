@@ -247,14 +247,14 @@ white-space: pre-line
     font-size: 60px;
 }
 .main-text-small{
-    font-size: 40px;
+    font-size: 4rem;
 }
 .monserrat{
     font-family: 'myMontserrat';
 }
 .title-description{
     font-family: 'myMontserrat';
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-left:  15%;
     padding-right: 15%;
 }
