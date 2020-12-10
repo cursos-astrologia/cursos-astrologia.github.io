@@ -57,7 +57,7 @@
 
     	].forEach((category,index)=>{
     	 $('#contenido-collapsable').append(` <li class="collection ${index==0?'active':''}">
-			<div class="collapsible-header row-striped"><i class="material-icons">play_arrow</i> ${category.title}</div>
+			<div class="collapsible-header row-striped"><i class="material-icons">keyboard_arrow_down</i> ${category.title}</div>
         		<div class="collapsible-body" id="video-section-${index}">
 
 		        </div>

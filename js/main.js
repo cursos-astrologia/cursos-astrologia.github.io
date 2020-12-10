@@ -4,6 +4,7 @@ function main() {
 	 const DISCOUNT_PAGE = "https://www.udemy.com/course/astrologia-desde-cero/?couponCode=CURSOASTRODESC"+sufix;
 	 const GIFT_PAGE = "https://www.udemy.com/gift/astrologia-desde-cero/?couponCode=CURSOASTRODESC"+sufix;
  
+ const BUY_PAGE = "https://www.udemy.com/join/signup-popup/?next=%2Fcart%2Fcheckout%2Fexpress%2Fcourse%2F3276288%2F%3FcouponCode=CURSOASTRODESC"+sufix;
 
     const addLink = (selector,link)=> $(selector).attr("href", link).attr("rel","noreferrer").attr("target","_blank")
         .click((e)=>{gtag_report_conversion && gtag_report_conversion(); return e});

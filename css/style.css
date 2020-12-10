@@ -14,6 +14,9 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
+.btn, .btn-large{
+  text-transform: inherit;
+}
 
 .sidenav-trigger {
   color: #26a69a;
@@ -173,6 +176,10 @@ footer.page-footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }  
+  .price-text-container-min {    
+    line-height: 1.5;
+    padding: .4rem 0;
   }
   .course-price-text{
     font-size: 36px;
@@ -293,4 +300,25 @@ white-space: pre-line
     width: 17rem;
   height: 17rem;
   margin-right: 20px;
+}
+.right-bottom-0{
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.buy-now-fixed-button{
+  position: relative;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    min-width: 10rem;
+    padding: 0 1.2rem;
+    justify-content: center;
+    white-space: nowrap;
+
+    height: 75%;
+
 }
