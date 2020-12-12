@@ -291,10 +291,11 @@ white-space: pre-line
   object-fit: cover;
   color: #fff;
 }
-.avatar-container{
+
+/*.avatar-container{
       display: block;
     padding: 0 2.4rem 0 0;
-}
+}*/
 
 .profile-img{
     width: 17rem;
