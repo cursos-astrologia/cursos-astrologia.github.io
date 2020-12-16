@@ -64,8 +64,9 @@
 		        </div>
 		      </li>`);
 
-	         category.items.forEach((video,itemIndex)=> {$('#video-section-'+index).append(`<div class="flex flex-space-between collection-item">
-					            <i class="material-icons ${!video.enabled?'grey-text text-darken-1':'primary-text'}">play_circle_filled</i>
+	         category.items.forEach((video,itemIndex)=> {$('#video-section-'+index).append(`
+            <div class="flex flex-space-between collection-item">
+					             <a href="#promo-video"><i class="material-icons ${!video.enabled?'grey-text text-darken-1':'primary-text'}">play_circle_filled</i></a>
 					            <div class="video-description">
 					               ${video.description}
 					            </div>              
@@ -73,7 +74,8 @@
 					              <a href="#promo-video" class="primary-text"> Vista previa</a>
 					            </div>    
 					            <div >${video.duration} </div>
-          </div`);
+          </div>
+`);
 		if (itemIndex<category.items.length-1)
 			$('#video-section-'+index).append(` <div class="divider"> </div`);
     		}
