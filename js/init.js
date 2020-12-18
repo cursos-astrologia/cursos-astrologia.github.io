@@ -161,8 +161,8 @@
 
  const comments = [
 {name:"Laura R",avatar:"LR",stars:5,color:"purple lighten-2", description:"Me gustó mucho el curso, los conceptos están muy bien explicados, con mucha claridad. Me sirvió para obtener y entender mi carta natal y usarlo como fuente de consulta al analizar la carta." },
-{name:"Edu P.",avatar:"EP",stars:4,color:"light-blue darken-4", description:"Me parece muy interesante. Buena exposición, clara y concisa." },
 {name:"Leo ",avatar:"LR",stars:5,color:"blue darken-1 ", description:"Muy bueno 👏 Los conceptos están explicados de forma clara y concisa. Me gustó lo de las luminarias. Lo recomiendo!" },
+{name:"Edu P.",avatar:"EP",stars:4,color:"light-blue darken-4", description:"Me parece muy interesante. Buena exposición, clara y concisa." },
 {name:"Marcelo",avatar:"MS",stars:5,color:"indigo darken-1 ", description:"Para quienes queremos acercarnos a estos temas arrancando desde 0, nos encontramos con explicaciones claras, sencillas y didácticas, que acrecientan el interés por los mismos, para continuar profundizando." },
 {name:"Yammel Maron.",avatar:"YM",stars:4,color:"light-blue darken-4", description:"Me esta gustando mucho como explica y como se esta llevando el curso, muy buena información introductoria para saber que es la Astrologia y como se compone, espero poder tomar mas para completar mi estudio. Gracias" },
  ];
