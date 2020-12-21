@@ -333,3 +333,10 @@ white-space: pre-line
   padding-right: 5px; 
   width: 4rem;
 }
+
+nav.scrollUp {
+  transform: translateY(-80px);
+}
+nav{
+    transition: all 0.5s;
+}
